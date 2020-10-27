@@ -1,0 +1,130 @@
+
+.alert-pre {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.jumb-home{
+  padding-left: 0px!important;
+  padding-top: 20px!important;
+  margin-top: 50px;
+}
+
+body{
+  background-image: url("../assets/dark_polygon14.png");
+}
+
+
+
+
+/*****************************/
+.quad_left {
+  background-color: rgba(0,0,0, 1.0);
+  float: left;
+  display: block;
+  width: 50%;
+  height: 500px;
+  margin-top: 45px;
+}
+
+.quad_right {
+  background-color: rgba(197, 87, 197, 0.3);
+  margin-top: 45px;
+  float: left;
+  display: block;
+  width: 50%;
+  height: 500px;
+}
+
+#logo {
+  margin-left: 30%;
+  margin-top: 40%;
+  width: 40%;
+}
+
+.bt_iniciar {
+  width: 200px;
+  background-color: #000;
+  border: none;
+  font-family: Verdana;
+  transition: width 1s;
+  text-decoration: none;
+  text-decoration-style: none;
+}
+a, a:focus, a:hover{
+  color:#fff!important;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+
+  background-color: #9f00c7!important;
+}
+.navbar .caret:before {
+  margin-top: 7px;
+  color: #e100ff!important;
+}
+a{
+  text-decoration: none;
+  text-decoration-style: none;
+}
+.bt_iniciar:hover {
+  width: 250px;
+  background-color: #000;
+  border: none;
+  font-family: Verdana;
+  color:white;
+}
+
+.text_login {
+  color: white;
+  margin-top: 250px!important;
+}
+.stepper-content{
+  padding: 20px!important;
+}
+
+
+.form-skill {
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+
+}
+.form-skill.move {
+  right: 100%;
+  margin-left: -100px; /*.animate width*/
+}
+
+.progress-step:before{
+  width: 50px;
+  height: 50px;
+  padding-top: 13px!important;
+  background-color: #0f71f2!important;
+}
+.progress-step{
+  padding-top: 13px!important;
+}
+.nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover {
+    transform: scale(1.2);
+    font-weight: 1000!important;
+}
+.icone-dash{
+  width: 100px!important;
+}
+.card{
+  background-color: rgb(70, 70, 70);
+  border-radius: 5px;
+  padding-top: 10px;
+  padding: 10px;
+  min-height: 290px!important;
+}
+
+.card-geral{
+  padding-left: 2px!important;
+  padding-right: 2px!important;
+  margin-top: 10px!important;
+  margin-bottom: 10px!important;
+}
