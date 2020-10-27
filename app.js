@@ -127,15 +127,9 @@ app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/index', indexRouter);
 app.use('/skills', indexRouter);
+app.use('/technologies', technologiesGSCRouter);
 
-/*app.post('/create', (req, res) => {
-  db.collection('data').insertOne(req.body, (err, result) => {
-    if(err) return console.log(err)
-    console.log('salvo no banco de dados')
-    res.redirect('/index');
-  }) 
-});
-
+/*
 /*Parte responsive
 Modal
 Steps
@@ -143,14 +137,7 @@ Sinalizar cards em desenvolvimento
 Arrumar textos dos cards 
 Listar conteúdo na tabela 
 Update, delete
-
-app.get('/skills', (req, res) => {
-  db.collection('data').find().toArray((err, results) => {
-      if (err) return console.log(err)
-      res.render('skills.hbs', { results })
-
-  })
-}); */
+*/
 
 //catch 404 
 app.use(function(req, res, next) {

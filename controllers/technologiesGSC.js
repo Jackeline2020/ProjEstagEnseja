@@ -91,7 +91,7 @@ exports.technologies_create = function (req, res) {
     // save technologies in the database.
     technologies.save()
         .then(data => {
-            res.redirect('/index');
+            res.redirect('/skills');
             /*res.send({
                 success: true,
                 message: 'Technologies successfully created',
