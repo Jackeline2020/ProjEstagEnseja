@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let technologiesGSCSchema = new Schema({
+    
     //f5
     LTM: {type: Number, required: true},
     GTM: {type: Number, required: true},
