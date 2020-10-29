@@ -12,45 +12,56 @@
 </div>
 <div class="clearfix"></div>
 <div class="table-responsive scrollbars">
+{{#if data }}
   <table class="table table-striped">
     <thead>
+    <tr>
+      <th scope="col">Employees</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Office</th>
+      <th scope="col">Job</th>
+      <th scope="col">LTM</th>
+      <th scope="col">GTM</th>
+      <th scope="col">ASM</th>
+      <th scope="col">APM</th>
+      <th scope="col">BIG-IQ</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
       <tr>
-        <th>
-          <div class="checkbox">
-            <input type="checkbox" id="table2Checkbox1" onchange="$(this).closest('table').find(':checkbox').prop('checked', $(this).is(':checked'));">
-            <label for="table2Checkbox1"></label>
-          </div>
-        </th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>UDM</th>
-        <th>List Price</th>
-        <th>Unit Price</th>
+        <th scope="row">{{this.name}}</th>
+        <td>{{this.email}}</td>
+        <td> {{ this.office }}</td>
+        <td> {{ this.job }}</td>
+        <td>{{this.LTM}}</td>
+        <td>{{this.GTM}}</td>
+        <td>{{this.ASM}}</td>
+        <td>{{this.APM}}</td>
+        <td>{{this.BIGIQ}}</td>
       </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="checkbox">
-            <input type="checkbox" id="table2Checkbox2">
-            <label for="table2Checkbox2"></label>
-          </div>
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
+    {{/each}}
+  </tbody>
   </table>
+  {{else}}
+   <p class="text-center">No skills found!</p>
+  {{/if}}
 </div>
 
 <!-- modal -->
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
-    <form action="/technologies/create" method="POST">
+    <form action="/skills/create" method="POST">
         <div class="tab-content">
           <!-- start cad -->
-          <input  class="hidden" name="nome" value="{{ user.displayName }}">
+          <input  class="hidden" name="name" value="{{ user.displayName }}">
           <input  class="hidden" name="email" value="{{ user.email }}">
+          <input  class="hidden" name="office" value="{{ user.office }}">
+          <input  class="hidden" name="job" value="{{ user.job }}">
+        
+
           <!-- start cad -->
 
 <div class="tab-content">
@@ -453,7 +464,7 @@
                    
       </div>
   <div class="btn-toolbar pull-right">
-          <button type="button" class="btn btn-primary" onClick=" $(this).closest('.modal').modal('hide');$('[steps]').trigger('complete'); basecoat.alert('Skills salvas com sucesso!').on('accept', function () { $('[steps]').trigger('reset'); });">Finish</button>
+          <button type="submit" class="btn btn-primary" onClick=" $(this).closest('.modal').modal('hide');$('[steps]').trigger('complete'); basecoat.alert('Skills salvas com sucesso!').on('accept', function () { $('[steps]').trigger('reset'); });">Finish</button>
         </div>
     </div>
               
