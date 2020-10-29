@@ -1,8 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let technologiesGSCSchema = new Schema({
-    
+let skillsSchema = new Schema({
+
+    name: {type: String, required: true, max: 255},
+    email: {type: String, required: true, max: 255},
+    office: {type: String, required: true, max: 255},
+    job: {type: String, required: true, max: 255},
+
     //f5
     LTM: {type: Number, required: true},
     GTM: {type: Number, required: true},
@@ -42,4 +47,4 @@ let technologiesGSCSchema = new Schema({
 });
 
 // Export the model
-module.exports = mongoose.model('technologiesGSC', technologiesGSCSchema);
+module.exports = mongoose.model('skillsGSC', skillsSchema);
