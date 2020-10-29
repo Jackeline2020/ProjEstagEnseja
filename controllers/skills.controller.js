@@ -52,6 +52,9 @@ exports.technologies_create = function (req, res) {
             //employees
             name: req.body.name,
             email: req.body.email,
+            office: req.body.office,
+            job: req.body.job,
+
             //f5
             LTM: req.body.LTM,
             GTM: req.body.GTM,

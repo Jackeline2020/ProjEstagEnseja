@@ -46,6 +46,8 @@ async function signInComplete(iss, sub, profile, accessToken, refreshToken, para
 
     if (user) {
       profile['email'] = user.mail ? user.mail : user.userPrincipalName;
+      profile['office'] = user.officeLocation ? user.officeLocation : user.officeLocation;
+      profile['job'] = user.jobTitle ? user.jobTitle : user.jobTitle;
     }
   } catch (err) {
     return done(err);

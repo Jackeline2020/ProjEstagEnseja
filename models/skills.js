@@ -5,6 +5,9 @@ let skillsSchema = new Schema({
 
     name: {type: String, required: true, max: 255},
     email: {type: String, required: true, max: 255},
+    office: {type: String, required: true, max: 255},
+    job: {type: String, required: true, max: 255},
+
     //f5
     LTM: {type: Number, required: true},
     GTM: {type: Number, required: true},

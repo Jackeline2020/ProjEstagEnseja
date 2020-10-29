@@ -16,24 +16,37 @@
   <table class="table table-striped">
     <thead>
     <tr>
-      <th scope="col">Nome</th>
-      <th scope="col">Email</th>
+      <th scope="col">Employees</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Office</th>
+      <th scope="col">Job</th>
       <th scope="col">LTM</th>
+      <th scope="col">GTM</th>
+      <th scope="col">ASM</th>
+      <th scope="col">APM</th>
+      <th scope="col">BIG-IQ</th>
+
     </tr>
   </thead>
   <tbody>
     {{#each data}}
       <tr>
-        <td>{{this.name}}</td>
+        <th scope="row">{{this.name}}</th>
         <td>{{this.email}}</td>
+        <td> {{ this.office }}</td>
+        <td> {{ this.job }}</td>
         <td>{{this.LTM}}</td>
+        <td>{{this.GTM}}</td>
+        <td>{{this.ASM}}</td>
+        <td>{{this.APM}}</td>
+        <td>{{this.BIGIQ}}</td>
       </tr>
     {{/each}}
   </tbody>
-  {{else}}
-   <p class="text-center">No book found!</p>
-  {{/if}}
   </table>
+  {{else}}
+   <p class="text-center">No skills found!</p>
+  {{/if}}
 </div>
 
 <!-- modal -->
@@ -45,6 +58,9 @@
           <!-- start cad -->
           <input  class="hidden" name="name" value="{{ user.displayName }}">
           <input  class="hidden" name="email" value="{{ user.email }}">
+          <input  class="hidden" name="office" value="{{ user.office }}">
+          <input  class="hidden" name="job" value="{{ user.job }}">
+
           <!-- start cad -->
           <div id="step1" class="tab-pane fade in active">
             <div class="row">
