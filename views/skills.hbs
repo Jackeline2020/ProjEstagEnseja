@@ -1,5 +1,9 @@
 {{#if user}}
+
+{{#unless data }}
 <li data-toggle="modal" data-target=".bd-example-modal-lg"><a>New Skill Matrix</a></li>
+{{/unless}}
+
 <canvas id="doughnut-chart" width="700" height="400"></canvas>
 
 <h4 class="pull-left" style="margin-top: 2px;">Your order</h4>
@@ -464,7 +468,7 @@
                    
       </div>
   <div class="btn-toolbar pull-right">
-          <button type="button" class="btn btn-primary" onClick=" $(this).closest('.modal').modal('hide');$('[steps]').trigger('complete'); basecoat.alert('Skills salvas com sucesso!').on('accept', function () { $('[steps]').trigger('reset'); });">Finish</button>
+          <button type="submit" class="btn btn-primary" onClick=" $(this).closest('.modal').modal('hide');$('[steps]').trigger('complete'); basecoat.alert('Skills salvas com sucesso!').on('accept', function () { $('[steps]').trigger('reset'); });">Finish</button>
         </div>
     </div>
               
