@@ -12,33 +12,27 @@
 </div>
 <div class="clearfix"></div>
 <div class="table-responsive scrollbars">
+  {{#if data }}
   <table class="table table-striped">
     <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Email</th>
+      <th scope="col">LTM</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
       <tr>
-        <th>
-          <div class="checkbox">
-            <input type="checkbox" id="table2Checkbox1" onchange="$(this).closest('table').find(':checkbox').prop('checked', $(this).is(':checked'));">
-            <label for="table2Checkbox1"></label>
-          </div>
-        </th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>UDM</th>
-        <th>List Price</th>
-        <th>Unit Price</th>
+        <td>{{this.name}}</td>
+        <td>{{this.email}}</td>
+        <td>{{this.LTM}}</td>
       </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="checkbox">
-            <input type="checkbox" id="table2Checkbox2">
-            <label for="table2Checkbox2"></label>
-          </div>
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
+    {{/each}}
+  </tbody>
+  {{else}}
+   <p class="text-center">No book found!</p>
+  {{/if}}
   </table>
 </div>
 
@@ -46,10 +40,10 @@
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
-    <form action="/technologies/create" method="POST">
+    <form action="/skills/create" method="POST">
         <div class="tab-content">
           <!-- start cad -->
-          <input  class="hidden" name="nome" value="{{ user.displayName }}">
+          <input  class="hidden" name="name" value="{{ user.displayName }}">
           <input  class="hidden" name="email" value="{{ user.email }}">
           <!-- start cad -->
           <div id="step1" class="tab-pane fade in active">

@@ -1,5 +1,5 @@
-// include technologies model
-const Technologies = require('../models/technologiesGSC');
+
+const Technologies = require('../models/skills');
 
 // create a new Technologies.
 exports.technologies_create = function (req, res) {
@@ -49,6 +49,9 @@ exports.technologies_create = function (req, res) {
     // create a technologies
     let technologies = new Technologies(
         {
+            //employees
+            name: req.body.name,
+            email: req.body.email,
             //f5
             LTM: req.body.LTM,
             GTM: req.body.GTM,
@@ -113,11 +116,13 @@ exports.all_technologies = (req, res) => {
             if (data === undefined || data.length == 0) message = "No technologies found!";
             else message = 'Technologies successfully retrieved';
 
-            res.send({
-                success: true,
-                message: message,
-                data: data
-            });
+            res.render('skills', {data: data});
+
+            //res.send({
+                //success: true,
+                //message: message,
+                //data: data
+           // });
         }).catch(err => {
         res.status(500).send({
             success: false,

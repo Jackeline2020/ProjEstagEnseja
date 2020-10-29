@@ -41,10 +41,9 @@
           style="height: 478px; margin-bottom: 0px; margin-right: 0px; max-height: none;">
           <ul class="nav" data-accordion-group="">
             <li><a href="/index">Home</a></li>
-            <li><a href="/skills">Certifications</a></li>
-            <li><a href="/skills">Trainings</a></li>
+            <li><a href="/skills">Skills</a></li>
 
-            <li>
+            <!--li>
               <a class="next collapsed" data-toggle="collapse">Skills</a>
               <ul class="collapse in">
 
@@ -75,10 +74,10 @@
                   </a>
                 </li>
 
-                <!--li class="hidden-closed" id = "item_ci"><a href="#">C.I.</a></li-->
+                <!-li class="hidden-closed" id = "item_ci"><a href="#">C.I.</a></li->
 
               </ul>
-            </li>
+            </li-->
 
           </ul>
         </nav>
@@ -121,12 +120,6 @@
             </div>
           </a>
         </li>
-        <li class="nav-item">
-          <a href="/index" class="nav-link{{#if active.home}} active{{/if}}">Home</a>
-        </li>
-        <li class="nav-item" data-toggle="modal" data-target=".bd-example-modal-lg">
-          <a href="/skills" class="nav-link">Skill Matrix</a>
-        </li>
       </ul>
 
       <!-- Center utility nav -->
@@ -139,25 +132,18 @@
         <li role="separator" class="divider hidden-mobile"></li>
         <!-- Dropdown menu -->
         <li class="dropdown hidden-mobile">
-          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
-            class="dropdown-toggle">
-
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
             <span class="fa fa-user"></span>{{ user.displayName }}<span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li>
+            <!--li>
               {{#if user.avatar}}
               <img src="{{ user.avatar }}" class="rounded-circle align-self-center mr-2" style="width: 32px;">
-              {{else}}
-              <i class="far fa-user-circle fa-lg rounded-circle align-self-center mr-2" style="width: 32px;"></i>
               {{/if}}
-              </a>
-            </li>
-            <li><a href="#">{{ user.displayName }}</a></li>
-            <li class="active"><a href="#">{{ user.email }}</a></li>
-            <li><a href="/auth/signout" class="dropdown-item">Sign Out</a></li>
-            {{else}}
-             <!--colocar um redirect-->
+            </li-->
+            <li><a>{{ user.displayName }}</a></li>
+            <li class="active"><a>{{ user.email }}</a></li>
+            <li><a href="/auth/signout" class="ropdown-item">Sign Out</a></li>
             {{/if}}
           </ul>
 

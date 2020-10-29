@@ -11,7 +11,7 @@ var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 var users = {};
 
 // database connection
-var dbConn  = require('./lib/db');
+var dbConn  = require('./config/db');
 
 require('dotenv').config();
 
@@ -76,8 +76,8 @@ passport.use(new OIDCStrategy(
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-var technologiesGSCRouter = require('./routes/technologiesGSC');
-var graph = require('./graph');
+var technologiesGSCRouter = require('./routes/skills');
+var graph = require('./API/graph');
 
 var app = express();
 
@@ -126,8 +126,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/index', indexRouter);
-app.use('/skills', indexRouter);
-app.use('/technologies', technologiesGSCRouter);
+app.use('/skills', technologiesGSCRouter);
 
 /*
 /*Parte responsive
