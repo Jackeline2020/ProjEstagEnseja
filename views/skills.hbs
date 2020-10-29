@@ -52,12 +52,14 @@
           <input  class="hidden" name="nome" value="{{ user.displayName }}">
           <input  class="hidden" name="email" value="{{ user.email }}">
           <!-- start cad -->
-          <div id="step1" class="tab-pane fade in active">
-            <div class="row">
-              <div class="col-xs-12">
-                <h3>F5</h3>
+
+<div class="tab-content">
+  <div id="step1" class="tab-pane fade in active">
+    <div class="row">
+      <div class="col-xs-12">
+            <h3>F5</h3>
                 <div class="form-skill">
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">LTM</label>
                         <select class="form-control" id="formGroupExampleInput" name="LTM">
                             <option value="0">0</option>
@@ -68,7 +70,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">GTM</label>
                         <select class="form-control" id="formGroupExampleInput2" name="GTM">
                             <option value="0">0</option>
@@ -79,7 +81,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">ASM</label>
                         <select class="form-control" id="formGroupExampleInput3" name="ASM">
                             <option value="0">0</option>
@@ -90,7 +92,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">APM</label>
                         <select class="form-control" id="formGroupExampleInput4" name="APM">
                             <option value="0">0</option>
@@ -101,7 +103,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">BIG-IQ</label>
                         <select class="form-control" id="formGroupExampleInput5" name="BIGIQ">
                             <option value="0">0</option>
@@ -113,32 +115,19 @@
                         </select>
                   </div>
                 </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step1>
-                    <li class="active"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!--kk-->
-                 <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step2]').trigger('next');">Continue</button>
-                </div>
 
-              </div>
-            </div>
-          </div>
-          <div id="step2" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-                <h3>Security</h3>
+   
+      </div>
+    </div>
+  </div>
+  <div id="step2" class="tab-pane fade">
+    <div class="row">
+      <div class="col-xs-12">
+
+               <h3>Security</h3>
                 <div class="form-skill">
 
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">Firepower</label>
                         <select class="form-control" id="formGroupExampleInput" name="Firepower">
                             <option value="0">0</option>
@@ -149,7 +138,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">ASA</label>
                         <select class="form-control" id="formGroupExampleInput2" name="ASA">
                             <option value="0">0</option>
@@ -160,7 +149,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">ISE</label>
                         <select class="form-control" id="formGroupExampleInput3" name="ISE">
                             <option value="0">0</option>
@@ -171,7 +160,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">Umbrella</label>
                         <select class="form-control" id="formGroupExampleInput4" name="Umbrella">
                             <option value="0">0</option>
@@ -182,7 +171,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">NGIPS</label>
                         <select class="form-control" id="formGroupExampleInput5" name="NGIPS">
                             <option value="0">0</option>
@@ -194,33 +183,19 @@
                         </select>
                   </div>
                 </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step2>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!-- kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step1]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step3]').trigger('next');">Continue</button>
-                </div>
 
-              </div>
-            </div>
-          </div>
-          <div id="step3" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-                <h3>Datacenter</h3>
+
+      </div>
+    </div>
+  </div>
+  <div id="step3" class="tab-pane fade">
+    <div class="row">
+      <div class="col-xs-12">
+       
+       
+              <h3>Datacenter</h3>
                 <div class="form-skill">
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">ACI</label>
                         <select class="form-control" id="formGroupExampleInput" name="ACI">
                             <option value="0">0</option>
@@ -231,7 +206,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">UCS</label>
                         <select class="form-control" id="formGroupExampleInput2" name="UCS">
                             <option value="0">0</option>
@@ -242,7 +217,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">MDS</label>
                         <select class="form-control" id="formGroupExampleInput3" name="MDS">
                             <option value="0">0</option>
@@ -253,7 +228,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">Vmware</label>
                         <select class="form-control" id="formGroupExampleInput4" name="Vmware">
                             <option value="0">0</option>
@@ -264,7 +239,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">FIS</label>
                         <select class="form-control" id="formGroupExampleInput5" name="FIS">
                             <option value="0">0</option>
@@ -276,33 +251,18 @@
                         </select>
                 </div>
               </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step3>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-               <!--kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step2]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step4]').trigger('next');">Continue</button>
-                </div>
 
-              </div>
-            </div>
-          </div>
-          <div id="step4" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-              <h3>WIFI</h3>
+
+
+      </div>
+    </div>
+  </div>
+  <div id="step4" class="tab-pane fade">
+    <div class="row">
+      <div class="col-xs-12">
+  <h3>WIFI</h3>
                 <div class="form-skill">
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">WCS</label>
                         <select class="form-control" id="formGroupExampleInput" name="WCS">
                             <option value="0">0</option>
@@ -313,7 +273,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">WLC</label>
                         <select class="form-control" id="formGroupExampleInput2" name="WLC">
                             <option value="0">0</option>
@@ -324,7 +284,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">AP</label>
                         <select class="form-control" id="formGroupExampleInput3" name="AP">
                             <option value="0">0</option>
@@ -335,7 +295,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">Meraki</label>
                         <select class="form-control" id="formGroupExampleInput4" name="Meraki">
                             <option value="0">0</option>
@@ -346,7 +306,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">Aruba</label>
                         <select class="form-control" id="formGroupExampleInput5" name="Aruba">
                             <option value="0">0</option>
@@ -358,34 +318,17 @@
                         </select>
                 </div>
               </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step4>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!--kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step3]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step5]').trigger('next');">Continue</button>
-                </div>
 
-              </div>
-            </div>
-          </div>
 
-          <div id="step5" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-              <h3>RoutingSwitching</h3>
+      </div>
+    </div>
+  </div>
+    <div id="step5" class="tab-pane fade">
+    <div class="row">
+      <div class="col-xs-12">
+ <h3>RoutingSwitching</h3>
                 <div class="form-skill">
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">Routing</label>
                         <select class="form-control" id="formGroupExampleInput" name="Routing">
                             <option value="0">0</option>
@@ -396,7 +339,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">Switching</label>
                         <select class="form-control" id="formGroupExampleInput2" name="Switching">
                             <option value="0">0</option>
@@ -407,7 +350,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">VLAN</label>
                         <select class="form-control" id="formGroupExampleInput3" name="VLAN">
                             <option value="0">0</option>
@@ -418,7 +361,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">BGP</label>
                         <select class="form-control" id="formGroupExampleInput4" name="BGP">
                             <option value="0">0</option>
@@ -429,7 +372,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">Static Routing</label>
                         <select class="form-control" id="formGroupExampleInput5" name="StaticRouting">
                             <option value="0">0</option>
@@ -441,34 +384,16 @@
                         </select>
                 </div>
               </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step5>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!--kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step4]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step6]').trigger('next');">Continue</button>
-                </div>
 
-              </div>
-            </div>
-          </div>
-
-          <div id="step6" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-              <h3>Collaboration</h3>
+      </div>
+    </div>
+  </div>
+    <div id="step6" class="tab-pane fade">
+    <div class="row">
+      <div class="col-xs-12">
+   <h3>Collaboration</h3>
                 <div class="form-skill">
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">CUCM</label>
                         <select class="form-control" id="formGroupExampleInput" name="CUCM">
                             <option value="0">0</option>
@@ -479,7 +404,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">UCCX</label>
                         <select class="form-control" id="formGroupExampleInput2" name="UCCX">
                             <option value="0">0</option>
@@ -490,7 +415,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">Media Sense</label>
                         <select class="form-control" id="formGroupExampleInput3" name="MediaSense">
                             <option value="0">0</option>
@@ -501,7 +426,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">Telepresence</label>
                         <select class="form-control" id="formGroupExampleInput4" name="Telepresence">
                             <option value="0">0</option>
@@ -512,7 +437,7 @@
                             <option value="5">5</option>
                         </select>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">Webex</label>
                         <select class="form-control" id="formGroupExampleInput5" name="Webex">
                             <option value="0">0</option>
@@ -524,26 +449,33 @@
                         </select>
                 </div>
               </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step6>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
+     
+                   
+      </div>
+  <div class="btn-toolbar pull-right">
+          <button type="button" class="btn btn-primary" onClick=" $(this).closest('.modal').modal('hide');$('[steps]').trigger('complete'); basecoat.alert('Skills salvas com sucesso!').on('accept', function () { $('[steps]').trigger('reset'); });">Finish</button>
+        </div>
+    </div>
+              
+  </div>
+ <div class="row">
+          <div class="nav-tabs-responsive scrollbars col-md-12">
+                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" steps>
+                    <li class="active"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
+                    <li ><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
+                    <li ><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
+                    <li><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
+                    <li><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
+                    <li><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
                   </ul>
                 </div>
-                <button type="button" class="btn btn-secondary"
-                    onClick="$('[step5]').trigger('reset');">Restart</button>
-                <div class="btn-toolbar pull-right">
-                  <button type="submit" class="btn btn-primary">Finish</button>
-                </div>
+ </div>
+</div>
 
-              </div>
+
+
             </div>
           </div>
-
         </div>
       </form>
     </div>
