@@ -11,7 +11,9 @@
   margin-top: 50px;
   height: 240px
 }
-
+.fa{
+  margin-left: 8px!important;
+}
 body{
   background-image: url("../assets/dark_polygon14.png");
 }
