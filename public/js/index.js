@@ -8,10 +8,10 @@ $(function() {
     new Chart(document.getElementById("doughnut-chart"), {
         type: 'doughnut',
         data: {
-          labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+          labels: ["F5","Security", "Routing&Switching", "Wifi", "Collaboration"],
           datasets: [
             {
-              label: "Population (millions)",
+              label: "Analistas",
               backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
               data: [2478,5267,734,784,433]
             }
@@ -20,7 +20,7 @@ $(function() {
         options: {
           title: {
             display: true,
-            text: 'Predicted world population (millions) in 2050'
+            text: 'Análise do número de profissionais por LoB'
           }
         }
     });
