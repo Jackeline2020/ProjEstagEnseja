@@ -1,18 +1,19 @@
 {{#if user}}
 <div class="jumbotron jumb-home">
-  <div class="col-md-3">
-    <img alt="Image" class="img-responsive" src="/assets/enseja_logo_split.png">
+  <div class="col-md-3 col-sm-3 ">
+    <img alt="Image" class="img-responsive imgJumb" src="/assets/enseja_logo_split.png">
   </div>
-  <div class="col-md-9"></div>
-  <h1>ENSEJA</h1>
+  <div class="col-md-9">
+  <h1 id="ensejaTitle" class="titulos">ENSEJA</h1>
 
-  <h4>Welcome {{ user.displayName }}!</h4>
+  <h4 class="titulos">Welcome {{ user.displayName }}!</h4>
+  </div>
 </div>
 <br>
 
 <div>
-  <div class="card-geral col-md-4">
-    <div class="card bg-dark text-white" data-toggle="tooltip" data-placement="auto top" title="Clique para ver o painel de skills!"> 
+  <div class="card-geral col-md-4" >
+    <a href="/Skills"><div class="card bg-dark text-white" data-toggle="tooltip" data-placement="auto top" title="Clique para ver o painel de skills!"> 
       <img class="card-img icone-dash" src="/assets/foguete.png" alt="Card image" href="/skills">
       <div class="card-img-overlay">
         <h5 class="card-title">Skills</h5>
@@ -20,7 +21,7 @@
          Here you can fill in your skill matrix and visualize that of your colleagues in a practical and interactive way, making use of the filters and obtaining quick information through the graph. 
         </p>
       </div>
-    </div>
+    </div></a>
   </div>
   <div class="card-geral col-md-4">
 
