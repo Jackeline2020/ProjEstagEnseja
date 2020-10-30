@@ -1,54 +1,40 @@
 
 const Technologies = require('../models/skills');
 
-// create a new Technologies.
-exports.technologies_create = function (req, res) {
-    // validate request
-    if( !req.body.LTM 
-        /*!req.body.GTM ||
-        !req.body.ASM ||
-        !req.body.APM ||
-        !req.body.BIGIQ || //f5
+// retrieve and return all technologies.
+exports.list = (req, res) => {
+    Technologies.find()
+        .then(data => {
+            var message = "";
+            if (data === undefined || data.length == 0) message = "No technologies found!";
+            else message = 'Technologies successfully retrieved';
 
-        !req.body.Firepower ||
-        !req.body.ASA ||
-        !req.body.ISE ||
-        !req.body.Umbrella ||
-        !req.body.NGIPS || //security
-        
-        !req.body.ACI ||
-        !req.body.UCS ||
-        !req.body.MDS ||
-        !req.body.Vmware ||
-        !req.body.FIS || //datacenter
+            res.render('skills', {data: data});
 
-        !req.body.WCS ||
-        !req.body.WLC ||
-        !req.body.AP ||
-        !req.body.Meraki ||
-        !req.body.Aruba || //wifi
-
-        !req.body.Routing ||
-        !req.body.Switching ||
-        !req.body.VLAN ||
-        !req.body.BGP ||
-        !req.body.StaticRouting || //routingswitch
-
-        !req.body.CUCM ||
-        !req.body.UCCX ||
-        !req.body.MediaSense ||
-        !req.body.Telepresence ||
-        !req.body.Webex //collaboration */
-      ) {
-        return res.status(400).send({
+            //res.send({
+                //success: true,
+                //message: message,
+                //data: data
+           // });
+        }).catch(err => {
+        res.status(500).send({
             success: false,
-            message: "Please enter technologies"
+            message: err.message || "Some error occurred while retrieving technologies."
         });
-    }
+    });
+};
+
+// create a new Technologies.
+exports.create = function (req, res) {
+
+    Technologies.findOne({ 'email': req.body.email })
+    .then(data => {
+        if(data){
+            res.json({ success: false, message: 'This email has no available' });
+        }else{
 
     // create a technologies
-    let technologies = new Technologies(
-        {
+    let technologies = new Technologies({
             //employees
             name: req.body.name,
             email: req.body.email,
@@ -91,51 +77,31 @@ exports.technologies_create = function (req, res) {
             MediaSense: req.body.MediaSense,
             Telepresence: req.body.Telepresence,
             Webex: req.body.Webex
-        }
-    );
+    });
 
     // save technologies in the database.
     technologies.save()
         .then(data => {
-            res.redirect('/skills');
+            res.redirect('/myskills');
             /*res.send({
                 success: true,
                 message: 'Technologies successfully created',
                 data: data
             });*/
         }).catch(err => {
-        res.status(500).send({
-            success: false,
-            message: err.message || "Some error occurred while creating the technologies."
+            res.status(500).send({
+                success: false,
+                message: err.message || "Some error occurred while creating the technologies."
+            })
         });
-    });
-};
+        }
 
-// retrieve and return all technologies.
-exports.all_technologies = (req, res) => {
-    Technologies.find()
-        .then(data => {
-            var message = "";
-            if (data === undefined || data.length == 0) message = "No technologies found!";
-            else message = 'Technologies successfully retrieved';
+    }).catch(err => res.json({ success: false, message: err, statusCode: 500 }));
 
-            res.render('skills', {data: data});
-
-            //res.send({
-                //success: true,
-                //message: message,
-                //data: data
-           // });
-        }).catch(err => {
-        res.status(500).send({
-            success: false,
-            message: err.message || "Some error occurred while retrieving technologies."
-        });
-    });
 };
 
 // find a single technologies with a id.
-exports.technologies_details = (req, res) => {
+exports.show = (req, res) => {
     Technologies.findById(req.params.id)
         .then(data => {
             if(!data) {
@@ -144,11 +110,13 @@ exports.technologies_details = (req, res) => {
                     message: "Technologies not found with id " + req.params.id
                 });
             }
-            res.send({
+            res.render('mySkills', {data: data});
+
+           /* res.send({
                 success: true,
                 message: 'Technologies successfully retrieved',
                 data: data
-            });
+            }); */
         }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({
@@ -164,7 +132,7 @@ exports.technologies_details = (req, res) => {
 };
 
 // update a technologies  by the id.
-exports.technologies_update = (req, res) => {
+exports.update = (req, res) => {
     // validate request
     if( !req.body.LTM || 
         !req.body.GTM ||
@@ -238,7 +206,7 @@ exports.technologies_update = (req, res) => {
 };
 
 // delete a technologies with the specified id.
-exports.technologies_delete = (req, res) => {
+exports.delete = (req, res) => {
     Technologies.findByIdAndRemove(req.params.id)
         .then(data => {
             if (!data) {

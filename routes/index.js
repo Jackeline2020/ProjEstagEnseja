@@ -12,4 +12,8 @@ router.get('/', function(req, res, next) {
   res.render('login');
 });
 
+router.get('/myskills', function(req, res, next) {
+  res.render('mySkills');
+});
+
 module.exports = router;
