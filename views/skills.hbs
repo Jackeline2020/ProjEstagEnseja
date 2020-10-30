@@ -28,7 +28,7 @@
       <h4 class="panel-title">
         F5
       </h4>
-      <div class="panel-subtitle">Os profissionais com esta tecnologia se encontram aqui</div>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
     </div>
     <div id="collapse1" class="panel-collapse collapse">
       <div class="panel-body">
@@ -37,27 +37,32 @@
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Category</th>
-                <th>UDM</th>
-                <th>List Price</th>
-                <th>Unit Price</th>
-                <!---->
-                <th>Actions</th>
-
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>LTM</th>
+                <th>GTM</th>
+                <th>ASM</th>
+                <th>APM</th>
+                <th>BIG IQ</th>
               </tr>
             </thead>
             <tbody>
               <!-- fazer for each aqui-->
+                {{#each data}}
               <tr>
-                <td>Lorem ipsum dolor</td>
-                <td>Lorem ipsum</td>
-                <td>1234</td>
-                <td>$ 1,177.60</td>
-                <td>$ 1,017.48</td>
-                <!---->
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
-
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.LTM}}</td>
+                <td>{{this.GTM}}</td>
+                <td>{{this.ASM}}</td>
+                <td>{{this.APM}}</td>
+                <td>{{this.BIGIQ}}</td>
               </tr>
+              {{/each}}
+              <!---->
             </tbody>
             <tfoot>
               <tr>
@@ -101,29 +106,41 @@
       <h4 class="panel-title">
         Security
       </h4>
-      <div class="panel-subtitle">Os profissionais com esta tecnologia se encontram aqui</div>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
     </div>
     <div id="collapse2" class="panel-collapse collapse">
       <div class="panel-body">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
-              <tr>
+               <tr>
                 <th>Name</th>
-                <th>Category</th>
-                <th>UDM</th>
-                <th>List Price</th>
-                <th>Unit Price</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Firepower</th>
+                <th>ASA</th>
+                <th>ISE</th>
+                <th>Umbrella</th>
+                <th>NGIPS</th>
               </tr>
             </thead>
-            <tbody>
+           <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
               <tr>
-                <td>Lorem ipsum dolor</td>
-                <td>Lorem ipsum</td>
-                <td>1234</td>
-                <td>$ 1,177.60</td>
-                <td>$ 1,017.48</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.Firepower}}</td>
+                <td>{{this.ASA}}</td>
+                <td>{{this.ISE}}</td>
+                <td>{{this.Umbrella}}</td>
+                <td>{{this.NGIPS}}</td>
               </tr>
+              {{/each}}
+              <!---->
             </tbody>
             <tfoot>
               <tr>
@@ -167,7 +184,7 @@
       <h4 class="panel-title">
         Data Center
       </h4>
-      <div class="panel-subtitle">Os profissionais com esta tecnologia se encontram aqui</div>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
     </div>
     <div id="collapse3" class="panel-collapse collapse">
       <div class="panel-body">
@@ -176,20 +193,32 @@
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Category</th>
-                <th>UDM</th>
-                <th>List Price</th>
-                <th>Unit Price</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>ACI</th>
+                <th>UCS</th>
+                <th>MDS</th>
+                <th>Vmware</th>
+                <th>FIS</th>
               </tr>
             </thead>
             <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
               <tr>
-                <td>Lorem ipsum dolor</td>
-                <td>Lorem ipsum</td>
-                <td>1234</td>
-                <td>$ 1,177.60</td>
-                <td>$ 1,017.48</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.ACI}}</td>
+                <td>{{this.UCS}}</td>
+                <td>{{this.MDS}}</td>
+                <td>{{this.Vmware}}</td>
+                <td>{{this.FIS}}</td>
               </tr>
+              {{/each}}
+              <!---->
             </tbody>
             <tfoot>
               <tr>
@@ -233,7 +262,7 @@
       <h4 class="panel-title">
         Wifi
       </h4>
-      <div class="panel-subtitle">Os profissionais com esta tecnologia se encontram aqui</div>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
     </div>
     <div id="collapse4" class="panel-collapse collapse">
       <div class="panel-body">
@@ -242,20 +271,32 @@
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Category</th>
-                <th>UDM</th>
-                <th>List Price</th>
-                <th>Unit Price</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>WCS</th>
+                <th>WLC</th>
+                <th>AP</th>
+                <th>Meraki</th>
+                <th>Aruba</th>
               </tr>
             </thead>
             <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
               <tr>
-                <td>Lorem ipsum dolor</td>
-                <td>Lorem ipsum</td>
-                <td>1234</td>
-                <td>$ 1,177.60</td>
-                <td>$ 1,017.48</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.WCS}}</td>
+                <td>{{this.WLC}}</td>
+                <td>{{this.AP}}</td>
+                <td>{{this.Meraki}}</td>
+                <td>{{this.Aruba}}</td>
               </tr>
+              {{/each}}
+              <!---->
             </tbody>
             <tfoot>
               <tr>
@@ -299,29 +340,41 @@
       <h4 class="panel-title">
         Routing&Switching
       </h4>
-      <div class="panel-subtitle">Os profissionais com esta tecnologia se encontram aqui</div>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
     </div>
     <div id="collapse5" class="panel-collapse collapse">
       <div class="panel-body">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
-              <tr>
+               <tr>
                 <th>Name</th>
-                <th>Category</th>
-                <th>UDM</th>
-                <th>List Price</th>
-                <th>Unit Price</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Routing</th>
+                <th>Switching</th>
+                <th>VLAN</th>
+                <th>BGP</th>
+                <th>StaticRouting</th>
               </tr>
             </thead>
             <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
               <tr>
-                <td>Lorem ipsum dolor</td>
-                <td>Lorem ipsum</td>
-                <td>1234</td>
-                <td>$ 1,177.60</td>
-                <td>$ 1,017.48</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.Routing}}</td>
+                <td>{{this.Switching}}</td>
+                <td>{{this.VLAN}}</td>
+                <td>{{this.BGP}}</td>
+                <td>{{this.StaticRouting}}</td>
               </tr>
+              {{/each}}
+              <!---->
             </tbody>
             <tfoot>
               <tr>
@@ -365,29 +418,41 @@
       <h4 class="panel-title">
         Collaboration
       </h4>
-      <div class="panel-subtitle">Os profissionais com esta tecnologia se encontram aqui</div>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
     </div>
     <div id="collapse6" class="panel-collapse collapse">
       <div class="panel-body">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
-              <tr>
+               <tr>
                 <th>Name</th>
-                <th>Category</th>
-                <th>UDM</th>
-                <th>List Price</th>
-                <th>Unit Price</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>CUCM</th>
+                <th>UCCX</th>
+                <th>MediaSense</th>
+                <th>Telepresence</th>
+                <th>Webex</th>
               </tr>
             </thead>
             <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
               <tr>
-                <td>Lorem ipsum dolor</td>
-                <td>Lorem ipsum</td>
-                <td>1234</td>
-                <td>$ 1,177.60</td>
-                <td>$ 1,017.48</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.CUCM}}</td>
+                <td>{{this.UCCX}}</td>
+                <td>{{this.MediaSense}}</td>
+                <td>{{this.Telepresence}}</td>
+                <td>{{this.Webex}}</td>
               </tr>
+              {{/each}}
+              <!---->
             </tbody>
             <tfoot>
               <tr>
@@ -424,44 +489,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-<div class="table-responsive scrollbars">
-  <table class="table table-striped">
-    <thead>
-    <tr>
-      <th scope="col">Employees</th>
-      <th scope="col">E-mail</th>
-      <th scope="col">Office</th>
-      <th scope="col">Job</th>
-      <th scope="col">LTM</th>
-      <th scope="col">GTM</th>
-      <th scope="col">ASM</th>
-      <th scope="col">APM</th>
-      <th scope="col">BIG-IQ</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    {{#each data}}
-      <tr>
-        <th scope="row">{{this.name}}</th>
-        <td>{{this.email}}</td>
-        <td> {{ this.office }}</td>
-        <td> {{ this.job }}</td>
-        <td>{{this.LTM}}</td>
-        <td>{{this.GTM}}</td>
-        <td>{{this.ASM}}</td>
-        <td>{{this.APM}}</td>
-        <td>{{this.BIGIQ}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-  </table>
-
-</div>
 
 <!---->
 {{else}}
