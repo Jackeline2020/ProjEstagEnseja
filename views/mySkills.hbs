@@ -4,6 +4,44 @@
   <button type="button" class="btn btn-block btn-primary">New Skill Matrix</button>
 </div>
 
+<h1> teste </h1>
+<br>
+{{#compare user.email  data.email operator="=="}}
+<div class="table-responsive scrollbars">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Employees</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Office</th>
+      <th scope="col">Job</th>
+      <th scope="col">LTM</th>
+      <th scope="col">GTM</th>
+      <th scope="col">ASM</th>
+      <th scope="col">APM</th>
+      <th scope="col">BIG-IQ</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <th scope="rows">1</th>
+        <td>{{data.email}}</td>
+        <td>{{data.office}}</td>
+        <td>{{data.job }}</td>
+        <td>{{data.LTM}}</td>
+        <td>{{data.GTM}}</td>
+        <td>{{data.ASM}}</td>
+        <td>{{data.APM}}</td>
+        <td>{{data.BIGIQ}}</td>
+        <td>
+        <a class="btn btn-success edit" href="../books/edit/<%=data[i].id%>">Edit</a>                       
+        <a class="btn btn-danger delete" onclick="return alert('Are You sure?')" href="../books/delete/<%=data[i].id%>">Delete</a>                       
+        </td>
+      </tr>
+  </tbody>
+  </table>
+</div>
+{{/compare}}
 <!-- modal mostra tabela, se não abre modal-->
 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">

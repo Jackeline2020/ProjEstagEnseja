@@ -30,6 +30,10 @@ exports.create = function (req, res) {
     Technologies.findOne({ 'email': req.body.email })
     .then(data => {
         if(data){
+            /*É AQUI
+            var $toast = basecoat.toast('This is a simple toast.');
+                $toast.trigger('show', [5000]); 
+            */
             res.json({ success: false, message: 'This email has no available' });
         }else{
 
