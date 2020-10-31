@@ -3,25 +3,52 @@
 
 <canvas id="doughnut-chart" width="300" height="120"></canvas>
 <br>
-<!--h4 class="pull-left" style="margin-top: 2px;">Your order</h4>
-<div class="pull-right">
-  <select class="form-control input-sm">
-    <option>Newest</option>
-    <option>Top rated</option>
-    <option>Sold out</option>
-  </select>
+
+
+<h1><a href="/skills/{{user._id}}">LINK PARA MINHAS SKILLS</a></h1>
+
+<!-- Modal -->
+{{#each data}}
+<div class="modal fade" id="ExemploModalCentralizado{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="TituloModalCentralizado">{{this.name}}</h4>
+        <li><a href="/skills/{{this.id}}">Skills</a></li>
+      </div>
+      <div class="modal-body">
+        <!-- -->
+        <table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">LTM</th>
+            <th scope="col">GTM</th>
+            <th scope="col">ASM</th>
+            <th scope="col">APM</th>
+            <th scope="col">BIG-IQ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">F5</th>
+            <td>{{this.LTM}}</td>
+            <td>{{this.GTM}}</td>
+            <td>{{this.ASM}}</td>
+            <td>{{this.APM}}</td>
+            <td>{{this.BIGIQ}}</td>
+          </tr>
+        </tbody>
+      </table>
+       <!-- -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="clearfix"></div-->
-
-
-
-
-
-
-
-
-
-
+{{/each}}
 
 <div class="panel panel-primary">
     <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
@@ -47,10 +74,11 @@
                 <th>BIG IQ</th>
               </tr>
             </thead>
+            <!-- Botão para acionar modal -->
             <tbody>
               <!-- fazer for each aqui-->
                 {{#each data}}
-              <tr>
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.job}}</td>

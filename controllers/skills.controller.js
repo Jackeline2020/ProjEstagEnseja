@@ -40,6 +40,7 @@ exports.create = function (req, res) {
     // create a technologies
     let technologies = new Technologies({
             //employees
+            _id: req.body._id,
             name: req.body.name,
             email: req.body.email,
             office: req.body.office,
@@ -86,7 +87,7 @@ exports.create = function (req, res) {
     // save technologies in the database.
     technologies.save()
         .then(data => {
-            res.redirect('/myskills');
+            res.redirect('/skills');
             /*res.send({
                 success: true,
                 message: 'Technologies successfully created',

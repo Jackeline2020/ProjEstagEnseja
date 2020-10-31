@@ -49,6 +49,7 @@ async function signInComplete(iss, sub, profile, accessToken, refreshToken, para
       profile['email'] = user.mail ? user.mail : user.userPrincipalName;
       profile['office'] = user.officeLocation ? user.officeLocation : user.officeLocation;
       profile['job'] = user.jobTitle ? user.jobTitle : user.jobTitle;
+      profile['_id'] = user.id ? user.id : user.id;
     }
   } catch (err) {
     return done(err);
@@ -124,6 +125,7 @@ handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
       '>':        function(l,r) { return l > r; },
       '<=':       function(l,r) { return l <= r; },
       '>=':       function(l,r) { return l >= r; },
+      '!':        function(l,r) { return l, r >= 3; },
       'typeof':   function(l,r) { return typeof l == r; }
   }
 

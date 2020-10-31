@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 let skillsSchema = new Schema({
 
+    _id: {type: String, required: true, max: 255},
     name: {type: String, required: true, max: 255},
     email: {type: String, required: true, max: 255},
     office: {type: String, required: true, max: 255},
