@@ -4,9 +4,6 @@
 <canvas id="doughnut-chart" width="300" height="120"></canvas>
 <br>
 
-
-<h1><a href="/skills/{{user._id}}">LINK PARA MINHAS SKILLS</a></h1>
-
 <!-- Modal -->
 {{#each data}}
 <div class="modal fade" id="ExemploModalCentralizado{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
@@ -14,7 +11,6 @@
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="TituloModalCentralizado">{{this.name}}</h4>
-        <li><a href="/skills/{{this.id}}">Skills</a></li>
       </div>
       <div class="modal-body">
         <!-- -->
@@ -50,6 +46,7 @@
 </div>
 {{/each}}
 
+<!---->
 <div class="panel panel-primary">
     <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
       <h4 class="panel-title">
