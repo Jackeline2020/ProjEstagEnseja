@@ -1,19 +1,24 @@
 {{#if user}}
 <br>
 
-<h1> My Skills </h1>
+<h1 class="text-center"> My Skills </h1>
 <br>
+<div class="nav-tabs-responsive scrollbars">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#tab1">F5</a></li>
+    <li><a data-toggle="tab" href="#tab2">Security</a></li>
+    <li><a data-toggle="tab" href="#tab3">DataCenter</a></li>
+    <li><a data-toggle="tab" href="#tab4">Wifi</a></li>
+    <li><a data-toggle="tab" href="#tab5">Routing&Switching</a></li>
+    <li><a data-toggle="tab" href="#tab6">Collaboration</a></li>
+  </ul>
+</div>
 
-<div class="panel panel-primary">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
-      <h4 class="panel-title">
-        F5
-      </h4>
-      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div class="table-responsive scrollbars">
+<div class="tab-content">
+  
+  <div id="tab1" class="tab-pane fade in active">
+    <div class="row" data-toggle="modal" data-target=".modal-f5">
+   <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
               <tr>
@@ -31,69 +36,29 @@
             </thead>
             <tbody>
               <!-- fazer for each aqui-->
-              {{#compare user.email  data.email operator="==="}}
               <tr>                
                 <td>{{data.name}}</td>
                 <td>{{data.email}}</td>
-                <td>{{this.job}}</td>
-                <td>{{this.office}}</td>
-                <td>{{this.LTM}}</td>
-                <td>{{this.GTM}}</td>
-                <td>{{this.ASM}}</td>
-                <td>{{this.APM}}</td>
-                <td>{{this.BIGIQ}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.LTM}}</td>
+                <td>{{data.GTM}}</td>
+                <td>{{data.ASM}}</td>
+                <td>{{data.APM}}</td>
+                <td>{{data.BIGIQ}}</td>
                 <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
               </tr>
-              {{/compare}}
               <!---->
             </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination pull-right no-margin">
-                      <li class="pagination-extra">
-                        <label for="rowsPerPage">Rows per page</label>
-                        <select id="rowsPerPage" class="form-control input-sm">
-                          <option>5</option>
-                          <option selected>10</option>
-                          <option>20</option>
-                          <option>50</option>
-                        </select>
-                      </li>
-                      <li class="pagination-extra">1-10 of 100</li>
-                      <li>
-                        <a>
-                          <span aria-label="Previous" class="fa fa-angle-left"></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span aria-label="Next" class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
-      </div>
+
     </div>
   </div>
-
-
-<div class="panel panel-primary">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
-      <h4 class="panel-title">
-        Security
-      </h4>
-      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
-    </div>
-    <div id="collapse2" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div class="table-responsive scrollbars">
+  <div id="tab2" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-security">
+   <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
                <tr>
@@ -126,53 +91,16 @@
             
               <!---->
             </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination pull-right no-margin">
-                      <li class="pagination-extra">
-                        <label for="rowsPerPage">Rows per page</label>
-                        <select id="rowsPerPage" class="form-control input-sm">
-                          <option>5</option>
-                          <option selected>10</option>
-                          <option>20</option>
-                          <option>50</option>
-                        </select>
-                      </li>
-                      <li class="pagination-extra">1-10 of 100</li>
-                      <li>
-                        <a>
-                          <span aria-label="Previous" class="fa fa-angle-left"></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span aria-label="Next" class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
-      </div>
+
     </div>
   </div>
+  <div id="tab3" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-datacenter">
 
-
-<div class="panel panel-primary">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
-      <h4 class="panel-title">
-        Data Center
-      </h4>
-      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div class="table-responsive scrollbars">
+ <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
               <tr>
@@ -205,52 +133,14 @@
             
               <!---->
             </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination pull-right no-margin">
-                      <li class="pagination-extra">
-                        <label for="rowsPerPage">Rows per page</label>
-                        <select id="rowsPerPage" class="form-control input-sm">
-                          <option>5</option>
-                          <option selected>10</option>
-                          <option>20</option>
-                          <option>50</option>
-                        </select>
-                      </li>
-                      <li class="pagination-extra">1-10 of 100</li>
-                      <li>
-                        <a>
-                          <span aria-label="Previous" class="fa fa-angle-left"></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span aria-label="Next" class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
-      </div>
+
     </div>
   </div>
-
-
-<div class="panel panel-primary">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
-      <h4 class="panel-title">
-        Wifi
-      </h4>
-      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse">
-      <div class="panel-body">
+  <div id="tab4" class="tab-pane fade">
+    <div class="row">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
@@ -284,52 +174,15 @@
             
               <!---->
             </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination pull-right no-margin">
-                      <li class="pagination-extra">
-                        <label for="rowsPerPage">Rows per page</label>
-                        <select id="rowsPerPage" class="form-control input-sm">
-                          <option>5</option>
-                          <option selected>10</option>
-                          <option>20</option>
-                          <option>50</option>
-                        </select>
-                      </li>
-                      <li class="pagination-extra">1-10 of 100</li>
-                      <li>
-                        <a>
-                          <span aria-label="Previous" class="fa fa-angle-left"></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span aria-label="Next" class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
-      </div>
+
+
     </div>
   </div>
-
-
-<div class="panel panel-primary">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">
-      <h4 class="panel-title">
-        Routing&Switching
-      </h4>
-      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
-    </div>
-    <div id="collapse5" class="panel-collapse collapse">
-      <div class="panel-body">
+  <div id="tab5" class="tab-pane fade">
+    <div class="row">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
@@ -363,52 +216,16 @@
             
               <!---->
             </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination pull-right no-margin">
-                      <li class="pagination-extra">
-                        <label for="rowsPerPage">Rows per page</label>
-                        <select id="rowsPerPage" class="form-control input-sm">
-                          <option>5</option>
-                          <option selected>10</option>
-                          <option>20</option>
-                          <option>50</option>
-                        </select>
-                      </li>
-                      <li class="pagination-extra">1-10 of 100</li>
-                      <li>
-                        <a>
-                          <span aria-label="Previous" class="fa fa-angle-left"></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span aria-label="Next" class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
-      </div>
+
+
     </div>
   </div>
 
-
-<div class="panel panel-primary">
-    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse6">
-      <h4 class="panel-title">
-        Collaboration
-      </h4>
-      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
-    </div>
-    <div id="collapse6" class="panel-collapse collapse">
-      <div class="panel-body">
+  <div id="tab6" class="tab-pane fade">
+    <div class="row">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
@@ -443,43 +260,205 @@
             
               <!---->
             </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="6">
-                  <nav aria-label="Page navigation">
-                    <ul class="pagination pull-right no-margin">
-                      <li class="pagination-extra">
-                        <label for="rowsPerPage">Rows per page</label>
-                        <select id="rowsPerPage" class="form-control input-sm">
-                          <option>5</option>
-                          <option selected>10</option>
-                          <option>20</option>
-                          <option>50</option>
-                        </select>
-                      </li>
-                      <li class="pagination-extra">1-10 of 100</li>
-                      <li>
-                        <a>
-                          <span aria-label="Previous" class="fa fa-angle-left"></span>
-                        </a>
-                      </li>
-                      <li>
-                        <a>
-                          <span aria-label="Next" class="fa fa-angle-right"></span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </td>
-              </tr>
-            </tfoot>
+
           </table>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade modal-f5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+            <h3>F5</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">LTM</label>
+                        <select class="form-control" id="formGroupExampleInput" name="LTM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">GTM</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="GTM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">ASM</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="ASM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">APM</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="APM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">BIG-IQ</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="BIGIQ">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-1 text-center">
+  <button type="button" class="btn btn-danger btn-block bottom-gutter">Delete</button>
+</div>
+<div class="col-xs-12 col-md-2 col-lg-1 text-center">
+  <button type="button" class="btn btn-primary btn-block bottom-gutter">Update</button>
+</div>
+    </div>
+
+    </div>
+    </div>
 
 
+
+    
+    <!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+      <div class="row">
+        <div class="col-xs-12">
+
+               <h3>Security</h3>
+          <div class="form-skill">
+
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Firepower</label>
+                        <select class="form-control" id="formGroupExampleInput" name="Firepower">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">ASA</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="ASA">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">ISE</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="ISE">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">Umbrella</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="Umbrella">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">NGIPS</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="NGIPS">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+</div>
+</div>
+
+      <div class="col-md-10 col-lg-10"></div>
+      <div class="col-xs-12 col-md-2 col-lg-1 text-center">
+        <button type="button" class="btn btn-danger btn-block bottom-gutter">Delete</button>
+      </div>
+      <div class="col-xs-12 col-md-2 col-lg-1 text-center">
+        <button type="button" class="btn btn-primary btn-block bottom-gutter">Update</button>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade modal-wifi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+      
+    </div>
+    </div>
+    </div>
+    <!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade modal-datacenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+      
+    </div>
+    </div>
+    </div>
+    <!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade modal-routing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+      
+    </div>
+    </div>
+    </div>
+        <!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade modal-collaboration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+      
+    </div>
+    </div>
+    </div>
 <!---->
 {{else}}
 <script> window.location ='/';</script>

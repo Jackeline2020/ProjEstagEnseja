@@ -30,7 +30,19 @@ a:link{
   text-decoration: none;
   text-decoration-style: none;
 }
+th, td{
+  text-align: center;
+}
 
+.nav-tabs > li {
+  float:none;
+  display:inline-block;
+  zoom:1;
+}
+
+.nav-tabs {
+  text-align:center;
+}
 /*****************************/
 .quad_left {
   background-color: rgba(0,0,0, 1.0);
@@ -119,10 +131,15 @@ a{
 }
 .progress-step{
   padding-top: 13px!important;
+  font-size: 12px!important;
 }
 .nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover {
     transform: scale(1.2);
     font-weight: 1000!important;
+    background-color: #0f71f2;
+}
+.nav-tabs.nav-tabs{
+  background-color: 	rgb(0,0,0, 0.2);
 }
 .icone-dash{
   width: 100px!important;
