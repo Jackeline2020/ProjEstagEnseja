@@ -135,13 +135,13 @@ a{
   padding-top: 13px!important;
   font-size: 12px!important;
 }
-.nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover {
-    transform: scale(1.2);
+.nav-tabs-section>li.active>a, .nav-tabs-section>li.active>a:focus, .nav-tabs-section>li.active>a:hover {
+    transform: scale(1.2)!important;
     font-weight: 1000!important;
-    background-color: #0f71f2;
+    background-color: #0f71f2!important;
 }
-.nav-tabs.nav-tabs{
-  background-color: 	rgb(0,0,0, 0.2);
+.nav-tabs-section{
+  background-color: 	rgb(0,0,0, 0.3);
 }
 .icone-dash{
   width: 100px!important;
