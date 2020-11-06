@@ -268,7 +268,7 @@
   </div>
 </div>
 
-<!-- modal mostra tabela, se não abre modal - update -->
+<!-- modal mostra tabela, se não abre modal - update  F5-->
 <div class="modal fade modal-f5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content stepper-content">
@@ -310,116 +310,87 @@
 </div>
 </div>
     
-    <!-- modal mostra tabela, se não abre modal-->
-<!--div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<!-- modal mostra tabela, se não abre modal SECURITY-->
+<div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
       <div class="row">
         <div class="col-xs-12">
-
-               <h3>Security</h3>
-          <div class="form-skill">
-
-                  <div class="form-group col-md-6">
-                    <label for="formGroupExampleInput">Firepower</label>
-                        <select class="form-control" id="formGroupExampleInput" name="Firepower">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="formGroupExampleInput2">ASA</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="ASA">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+        <h3>Security</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Firepower</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Firepower" value="{{data.Firepower}}">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput3">ISE</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="ISE">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <label for="formGroupExampleInput5">ASA</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ASA" value="{{data.ASA}}">
                   </div>
                   <div class="form-group col-md-4">
-                    <label for="formGroupExampleInput4">Umbrella</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="Umbrella">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <label for="formGroupExampleInput5">ISE</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ISE" value="{{data.ISE}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Umbrella</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Umbrella" value="{{data.Umbrella}}">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">NGIPS</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="NGIPS">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <input type="number" min="0" max="5" class="form-control" name="NGIPS" value="{{data.NGIPS}}">
                   </div>
 </div>
 </div>
+<div class="col-md-10 col-lg-10"></div>
+    <div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+    </div>
+</div>
+</div>
+           
+</div>
+</div>
+</div>
 
-      <div class="col-md-10 col-lg-10"></div>
-      <div class="col-xs-12 col-md-2 col-lg-1 text-center">
-        <button type="button" class="btn btn-danger btn-block bottom-gutter">Delete</button>
-      </div>
-      <div class="col-xs-12 col-md-2 col-lg-1 text-center">
-        <button type="button" class="btn btn-primary btn-block bottom-gutter">Update</button>
-      </div>
-    </div>
-    </div>
-    </div>
-    <!- modal mostra tabela, se não abre modal->
-<div class="modal fade modal-wifi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content stepper-content">
-      
-    </div>
-    </div>
-    </div>
-    <!- modal mostra tabela, se não abre modal->
+<!-- modal mostra tabela, se não abre modal DATACENTER-->
 <div class="modal fade modal-datacenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
-      
+      <div class="row">
+        <div class="col-xs-12">
+        <h3>DataCenter</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">ACI</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ACI" value="{{data.ACI}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">UCS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="UCS" value="{{data.UCS}}">
+                  </div><div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">MDS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="MDS" value="{{data.MDS}}">
+                  </div>
+                  </div><div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Vmware</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Vmware" value="{{data.Vmware}}">
+                  </div><div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">FIS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="FIS" value="{{data.FIS}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+    <div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
     </div>
-    </div>
-    </div>
-    <!- modal mostra tabela, se não abre modal->
-<div class="modal fade modal-routing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content stepper-content">
-       </form>
-    </div>
-    </div>
-    </div>
-        <!- modal mostra tabela, se não abre modal-->
-<div class="modal fade modal-collaboration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content stepper-content">
-      
-    </div>
-    </div>
-    </div>
+</div>
+</div>
+     </form>      
+</div>
+</div>
+</div>
+
+
 <!---->
 {{else}}
 <script> window.location ='/';</script>
