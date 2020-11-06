@@ -135,12 +135,12 @@ a{
   padding-top: 13px!important;
   font-size: 12px!important;
 }
-.nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover {
+.nav-tabs-section>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover {
     transform: scale(1.2);
     font-weight: 1000!important;
     background-color: #0f71f2;
 }
-.nav-tabs.nav-tabs{
+.nav-tabs-section{
   background-color: 	rgb(0,0,0, 0.2);
 }
 .icone-dash{
