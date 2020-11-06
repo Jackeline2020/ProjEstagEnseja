@@ -271,77 +271,41 @@
 <div class="modal fade modal-f5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content stepper-content">
-            <form action="/skills/update/{{data._id}}" method="POST">
-
+            <form action="/skills/put/{{user._id}}" method="POST">
 <div class="row">
 <div class="col-xs-12">
 <h3>F5</h3>
 <div class="form-skill">
                   <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">LTM</label>
-                        <select class="form-control" id="formGroupExampleInput" name="LTM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <input type="number" min="0" max="5" class="form-control" name="LTM" value="{{data.LTM}}">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="formGroupExampleInput2">GTM</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="GTM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <input type="number" min="0" max="5" class="form-control" name="GTM" value="{{data.GTM}}">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="formGroupExampleInput3">ASM</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="ASM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
+                    <input type="number" min="0" max="5" class="form-control" name="ASM" value="{{data.ASM}}">
+                 </div>
                   <div class="form-group col-md-4">
                     <label for="formGroupExampleInput4">APM</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="APM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <input type="number" min="0" max="5" class="form-control" name="APM" value="{{data.APM}}">
                   </div>
                   <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">BIG-IQ</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="BIGIQ">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
+                    <input type="number" min="0" max="5" class="form-control" name="BIGIQ" value="{{data.BIGIQ}}">
                   </div>
 </div>
 </div>
-<div class="col-md-10 col-lg-10"></div>
-<div class="col-xs-12 col-md-2 col-lg-1 text-center">
-  <button type="submit" class="btn btn-primary btn-block bottom-gutter">Update</button>
-</div>
+    <div class="col-xs-12 col-md-2 col-lg-1 text-center">
+        <button type="submit" class="btn btn-primary btn-block bottom-gutter">Update</button>
     </div>
 </div>
+           
 </div>
-
+</div>
+</div>
     
     <!-- modal mostra tabela, se não abre modal-->
 <!--div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -441,7 +405,7 @@
 <div class="modal fade modal-routing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
-      
+       </form>
     </div>
     </div>
     </div>
@@ -452,7 +416,7 @@
       
     </div>
     </div>
-    </div-->
+    </div>
 <!---->
 {{else}}
 <script> window.location ='/';</script>

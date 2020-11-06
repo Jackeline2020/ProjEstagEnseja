@@ -150,10 +150,12 @@ exports.update = (req, res) => {
                     message: "Technologies not found with id " + req.params.id
                 });
             }*/
-            res.send({
+            res.redirect('/skills');
+
+           /* res.send({
                 success: true,
                 data: data
-            });
+            }); */
         }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({

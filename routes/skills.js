@@ -8,7 +8,7 @@ const skillsGSC_controller = require('../controllers/skills.controller');
 router.get('/', skillsGSC_controller.list);  
 router.post('/create', skillsGSC_controller.create);
 router.get('/:id', skillsGSC_controller.show);
-router.put('/up/:id', skillsGSC_controller.update);
+router.post('/put/:id', skillsGSC_controller.update);
 router.post('/delete/:id', skillsGSC_controller.del);
   
 module.exports = router;
