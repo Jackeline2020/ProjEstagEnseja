@@ -84,6 +84,9 @@ a, a:focus, a:hover{
 
   background-color: #9f00c7!important;
 }
+.bg-primary, .btn-primary{
+background-color: #8f00b3!important;
+}
 .navbar .caret:before {
   margin-top: 7px;
   color: #e100ff!important;
@@ -129,11 +132,32 @@ a{
   width: 50px;
   height: 50px;
   padding-top: 13px!important;
-  background-color: #0f71f2!important;
+  background-color: #8f00b3!important;
+}
+.col-numbers{
+  padding-right: 0px!important;
+}
+.col-chart{
+padding-left: 0px!important;
+}
+.card-number{
+  height: 70px;
+  padding-top: 17px;
+}
+.card-data{
+  align-items: center;
+  text-align: center;
+  min-height: 150px!important;
+  background-color: rgb(70, 70, 70);
+  border-radius: 5px;
+  padding-top: 10px;
+  padding: 10px;
+
 }
 .progress-step{
   padding-top: 13px!important;
   font-size: 12px!important;
+  color: #fff;
 }
 .nav-tabs-section>li.active>a, .nav-tabs-section>li.active>a:focus, .nav-tabs-section>li.active>a:hover {
     transform: scale(1.2)!important;
@@ -146,7 +170,7 @@ a{
 .icone-dash{
   width: 100px!important;
 }
-.card{
+.card-home{
   background-color: rgb(70, 70, 70);
   border-radius: 5px;
   padding-top: 10px;

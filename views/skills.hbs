@@ -1,7 +1,26 @@
 {{#if user}}
 <br>
+<div class="row">
+  <div class="col-md-3 col-numbers">
+    
+<div class="card card-data">
+  <h5 class="card-header">Analistas no GSC:</h5>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary card-number"><h1 class="card-text">80</h1></a>
+  </div>
+</div>
+<br>
+<div class="card card-data">
+  <h5 class="card-header">Analistas cadastrados:</h5>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary card-number"><h1 class="card-text">20</h1></a>
+  </div>
+</div>
+  </div>
+<div class="col-md-9 col-chart"> <canvas id="doughnut-chart" width="400" height="175"></canvas>
+</div>
+</div>
 
-<canvas id="doughnut-chart" width="300" height="120"></canvas>
 <br>
     
 <!-- Modal -->
@@ -45,7 +64,7 @@
        <!-- -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
