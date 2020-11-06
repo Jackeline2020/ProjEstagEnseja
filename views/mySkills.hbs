@@ -31,7 +31,6 @@
                 <th>ASM</th>
                 <th>APM</th>
                 <th>BIG IQ</th>
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -46,7 +45,7 @@
                 <td>{{data.ASM}}</td>
                 <td>{{data.APM}}</td>
                 <td>{{data.BIGIQ}}</td>
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
               </tr>
               <!---->
             </tbody>
@@ -71,7 +70,6 @@
                 <th>ISE</th>
                 <th>Umbrella</th>
                 <th>NGIPS</th>
-                <th>Actions</th>
               </tr>
             </thead>
            <tbody>
@@ -86,7 +84,7 @@
                 <td>{{data.ISE}}</td>
                 <td>{{data.Umbrella}}</td>
                 <td>{{data.NGIPS}}</td>
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
               </tr>
             
               <!---->
@@ -113,7 +111,6 @@
                 <th>MDS</th>
                 <th>Vmware</th>
                 <th>FIS</th>
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -128,7 +125,7 @@
                 <td>{{data.MDS}}</td>
                 <td>{{data.Vmware}}</td>
                 <td>{{data.FIS}}</td>
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
               </tr>
             
               <!---->
@@ -154,7 +151,6 @@
                 <th>AP</th>
                 <th>Meraki</th>
                 <th>Aruba</th>
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -169,7 +165,7 @@
                 <td>{{data.AP}}</td>
                 <td>{{data.Meraki}}</td>
                 <td>{{data.Aruba}}</td>
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
               </tr>
             
               <!---->
@@ -196,7 +192,6 @@
                 <th>VLAN</th>
                 <th>BGP</th>
                 <th>StaticRouting</th>
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -211,7 +206,7 @@
                 <td>{{data.VLAN}}</td>
                 <td>{{data.BGP}}</td>
                 <td>{{data.StaticRouting}}</td>
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
               </tr>
             
               <!---->
@@ -239,7 +234,6 @@
                 <th>MediaSense</th>
                 <th>Telepresence</th>
                 <th>Webex</th>
-                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -254,7 +248,7 @@
                 <td>{{data.MediaSense}}</td>
                 <td>{{data.Telepresence}}</td>
                 <td>{{data.Webex}}</td>
-                <td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
 
               </tr>
             
@@ -265,17 +259,23 @@
         </div>
       </div>
     </div>
+        <div class="col-xs-12 col-md-2 col-lg-1 text-center">
+            <form action="/skills/delete/{{user._id}}" method="POST">
+            <button type="submit" onclick="return alert('Are You sure?')" class="btn btn-danger btn-block bottom-gutter">Delete</button>
+            </form>
+        </div>
   </div>
 </div>
 
-<!-- modal mostra tabela, se não abre modal-->
+<!-- modal mostra tabela, se não abre modal - update -->
 <div class="modal fade modal-f5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content stepper-content">
+            <form action="/skills/update/{{data._id}}" method="POST">
 
 <div class="row">
 <div class="col-xs-12">
-            <h3>F5</h3>
+<h3>F5</h3>
 <div class="form-skill">
                   <div class="form-group col-md-6">
                     <label for="formGroupExampleInput">LTM</label>
@@ -336,21 +336,15 @@
 </div>
 <div class="col-md-10 col-lg-10"></div>
 <div class="col-xs-12 col-md-2 col-lg-1 text-center">
-  <button type="button" class="btn btn-danger btn-block bottom-gutter">Delete</button>
-</div>
-<div class="col-xs-12 col-md-2 col-lg-1 text-center">
-  <button type="button" class="btn btn-primary btn-block bottom-gutter">Update</button>
+  <button type="submit" class="btn btn-primary btn-block bottom-gutter">Update</button>
 </div>
     </div>
-
-    </div>
-    </div>
-
-
+</div>
+</div>
 
     
     <!-- modal mostra tabela, se não abre modal-->
-<div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<!--div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
       <div class="row">
@@ -427,7 +421,7 @@
     </div>
     </div>
     </div>
-    <!-- modal mostra tabela, se não abre modal-->
+    <!- modal mostra tabela, se não abre modal->
 <div class="modal fade modal-wifi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
@@ -435,7 +429,7 @@
     </div>
     </div>
     </div>
-    <!-- modal mostra tabela, se não abre modal-->
+    <!- modal mostra tabela, se não abre modal->
 <div class="modal fade modal-datacenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
@@ -443,7 +437,7 @@
     </div>
     </div>
     </div>
-    <!-- modal mostra tabela, se não abre modal-->
+    <!- modal mostra tabela, se não abre modal->
 <div class="modal fade modal-routing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
@@ -451,14 +445,14 @@
     </div>
     </div>
     </div>
-        <!-- modal mostra tabela, se não abre modal-->
+        <!- modal mostra tabela, se não abre modal-->
 <div class="modal fade modal-collaboration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
       
     </div>
     </div>
-    </div>
+    </div-->
 <!---->
 {{else}}
 <script> window.location ='/';</script>

@@ -9,11 +9,10 @@ var flash = require('connect-flash');
 var passport = require('passport');
 var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 var users = {};
-const { handlebars } = require('hbs');
+//const { handlebars } = require('hbs');
 
 // database connection
-var dbConn  = require('./config/db');
-
+require('./config/db');
 require('dotenv').config();
 
 passport.serializeUser(function(user, done) {
@@ -80,7 +79,7 @@ passport.use(new OIDCStrategy(
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-var technologiesGSCRouter = require('./routes/skills');
+var skillsGSCRouter = require('./routes/skills');
 var graph = require('./API/graph');
 
 var app = express();
@@ -110,7 +109,7 @@ app.use(function(req, res, next) {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
+/*handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
 
   if (arguments.length < 3)
       throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
@@ -140,7 +139,7 @@ handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
       return options.inverse(this);
   }
 
-});
+}); */
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -162,17 +161,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/index', indexRouter);
-app.use('/skills', technologiesGSCRouter);
-
-/*
-/*Parte responsive
-Modal
-Steps
-Sinalizar cards em desenvolvimento
-Arrumar textos dos cards 
-Listar conteúdo na tabela 
-Update, delete
-*/
+app.use('/skills', skillsGSCRouter);
 
 //catch 404 
 app.use(function(req, res, next) {

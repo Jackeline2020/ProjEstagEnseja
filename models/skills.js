@@ -3,48 +3,48 @@ const Schema = mongoose.Schema;
 
 let skillsSchema = new Schema({
 
-    _id: {type: String, required: true, max: 255},
-    name: {type: String, required: true, max: 255},
-    email: {type: String, required: true, max: 255},
-    office: {type: String, required: true, max: 255},
+    _id: {type: String},
+    name: {type: String, required: false, max: 255},
+    email: {type: String, required: false, max: 255},
+    office: {type: String, required: false, max: 255},
     job: {type: String, required: false, max: 255},
 
     //f5
-    LTM: {type: Number, required: true},
-    GTM: {type: Number, required: true},
-    ASM: {type: Number, required: true},
-    APM: {type: Number, required: true},
-    BIGIQ: {type: Number, required: true},
+    LTM: {type: Number, required: false},
+    GTM: {type: Number, required: false},
+    ASM: {type: Number, required: false},
+    APM: {type: Number, required: false},
+    BIGIQ: {type: Number, required: false},
     //security
-    Firepower: {type: Number, required: true},
-    ASA: {type: Number, required: true},
-    ISE: {type: Number, required: true},
-    Umbrella: {type: Number, required: true},
-    NGIPS: {type: Number, required: true},
+    Firepower: {type: Number, required: false},
+    ASA: {type: Number, required: false},
+    ISE: {type: Number, required: false},
+    Umbrella: {type: Number, required: false},
+    NGIPS: {type: Number, required: false},
     //datacenter
-    ACI: {type: Number, required: true},
-    UCS: {type: Number, required: true},
-    MDS: {type: Number, required: true},
-    Vmware: {type: Number, required: true},
-    FIS: {type: Number, required: true},
+    ACI: {type: Number, required: false},
+    UCS: {type: Number, required: false},
+    MDS: {type: Number, required: false},
+    Vmware: {type: Number, required: false},
+    FIS: {type: Number, required: false},
     //wifi
-    WCS: {type: Number, required: true},
-    WLC: {type: Number, required: true},
-    AP: {type: Number, required: true},
-    Meraki: {type: Number, required: true},
-    Aruba: {type: Number, required: true},
+    WCS: {type: Number, required: false},
+    WLC: {type: Number, required: false},
+    AP: {type: Number, required: false},
+    Meraki: {type: Number, required: false},
+    Aruba: {type: Number, required: false},
     //routingswitch
-    Routing: {type: Number, required: true},
-    Switching: {type: Number, required: true},
-    VLAN: {type: Number, required: true},
-    BGP: {type: Number, required: true},
-    StaticRouting: {type: Number, required: true},
+    Routing: {type: Number, required: false},
+    Switching: {type: Number, required: false},
+    VLAN: {type: Number, required: false},
+    BGP: {type: Number, required: false},
+    StaticRouting: {type: Number, required: false},
     //collaboration
-    CUCM: {type: Number, required: true},
-    UCCX: {type: Number, required: true},
-    MediaSense: {type: Number, required: true},
-    Telepresence: {type: Number, required: true},
-    Webex: {type: Number, required: true}
+    CUCM: {type: Number, required: false},
+    UCCX: {type: Number, required: false},
+    MediaSense: {type: Number, required: false},
+    Telepresence: {type: Number, required: false},
+    Webex: {type: Number, required: false}
 });
 
 // Export the model

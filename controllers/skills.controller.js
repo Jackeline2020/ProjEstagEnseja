@@ -110,10 +110,12 @@ exports.show = (req, res) => {
     Technologies.findById(req.params.id)
         .then(data => {
             if(!data) {
-                return res.status(404).send({
+                res.redirect('/skills');
+
+                /*return res.status(404).send({
                     success: false,
                     message: "Technologies not found with id " + req.params.id
-                });
+                });*/
             }
             res.render('mySkills', {data: data});
 
@@ -124,10 +126,11 @@ exports.show = (req, res) => {
             }); */
         }).catch(err => {
         if(err.kind === 'ObjectId') {
-            return res.status(404).send({
+            res.redirect('/skills');
+            /*return res.status(404).send({
                 success: false,
                 message: "Technologies not found with id " + req.params.id
-            });
+            });*/
         }
         return res.status(500).send({
             success: false,
@@ -138,60 +141,15 @@ exports.show = (req, res) => {
 
 // update a technologies  by the id.
 exports.update = (req, res) => {
-    // validate request
-    if( !req.body.LTM || 
-        !req.body.GTM ||
-        !req.body.ASM ||
-        !req.body.APM ||
-        !req.body.BIGIQ || //f5
-
-        !req.body.Firepower ||
-        !req.body.ASA ||
-        !req.body.ISE ||
-        !req.body.Umbrella ||
-        !req.body.NGIPS || //security
-        
-        !req.body.ACI ||
-        !req.body.UCS ||
-        !req.body.MDS ||
-        !req.body.Vmware ||
-        !req.body.FIS || //datacenter
-
-        !req.body.WCS ||
-        !req.body.WLC ||
-        !req.body.AP ||
-        !req.body.Meraki ||
-        !req.body.Aruba || //wifi
-
-        !req.body.Routing ||
-        !req.body.Switching ||
-        !req.body.VLAN ||
-        !req.body.BGP ||
-        !req.body.StaticRouting || //routingswitch
-
-        !req.body.CUCM ||
-        !req.body.UCCX ||
-        !req.body.MediaSense ||
-        !req.body.Telepresence ||
-        !req.body.Webex //collaboration
-        ) {
-        return res.status(400).send({
-            success: false,
-            message: "Please enter technologies name and price"
-        });
-    }
-
     // find technologies and update
-    Technologies.findByIdAndUpdate(req.params.id, {
-        $set: req.body
-    }, {new: true})
+    Technologies.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true})
         .then(data => {
-            if(!data) {
+            /*if(!data) {
                 return res.status(404).send({
                     success: false,
                     message: "Technologies not found with id " + req.params.id
                 });
-            }
+            }*/
             res.send({
                 success: true,
                 data: data
@@ -211,19 +169,22 @@ exports.update = (req, res) => {
 };
 
 // delete a technologies with the specified id.
-exports.delete = (req, res) => {
-    Technologies.findByIdAndRemove(req.params.id)
+exports.del = (req, res) => {
+    Technologies.findByIdAndDelete(req.params.id)
         .then(data => {
             if (!data) {
-                return res.status(404).send({
+                res.redirect('/skills');
+
+                /*return res.status(404).send({
                     success: false,
                     message: "Technologies not found with id " + req.params.id
-                });
+                });*/
             }
-            res.send({
+            res.redirect('/skills');
+            /*res.send({
                 success: true,
                 message: "Technologies successfully deleted!"
-            });
+            });*/
         }).catch(err => {
         if (err.kind === 'ObjectId' || err.name === 'NotFound') {
             return res.status(404).send({
