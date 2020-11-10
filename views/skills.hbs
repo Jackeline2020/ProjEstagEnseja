@@ -24,16 +24,27 @@
 <br>
     
 <!-- Modal -->
+<script> 
+function somar(item) {
+    total += item;
+}
+
+data.forEach(somar);
+alert(total);
+</script>
+
 {{#each data}}
 <div class="modal fade" id="ExemploModalCentralizado{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="TituloModalCentralizado">{{this.name}}</h4>
+        <h5 class="modal-title" id="TituloModalCentralizado">{{this.email}}</h5>
       </div>
       <div class="modal-body">
         <!-- -->
         <table class="table table-hover table-dark">
+<!-- avg f5-->
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -42,6 +53,7 @@
             <th scope="col">ASM</th>
             <th scope="col">APM</th>
             <th scope="col">BIG-IQ</th>
+            <th scope="col">F5 AVG</th>
           </tr>
         </thead>
         <tbody>
@@ -52,16 +64,142 @@
             <td>{{this.ASM}}</td>
             <td>{{this.APM}}</td>
             <td>{{this.BIGIQ}}</td>
-            <script>
-             //each(data){
-              //alert(data);
-             //}
-              //this.LTM + this.GTM + this.ASM + this.APM + this.BIGIQ;
-            //document.getElementById("media").innerHTML = media;
-            
-            </script>
+            <td>{{#media LTM GTM ASM APM BIGIQ}}
+                {{/media}}
+            </td>    
           </tr>
         </tbody>
+
+<!-- avg security-->
+         <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Firepower</th>
+            <th scope="col">ASA</th>
+            <th scope="col">ISE</th>
+            <th scope="col">Umbrella</th>
+            <th scope="col">NGIPS</th>
+            <th scope="col">Security AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Security</th>
+            <td>{{this.Firepower}}</td>
+            <td>{{this.ASA}}</td>
+            <td>{{this.ISE}}</td>
+            <td>{{this.Umbrella}}</td>
+            <td>{{this.NGIPS}}</td>
+            <td>{{#media Firepower ASA ISE Umbrella NGIPS}}
+                {{/media}}
+            </td>    
+          </tr>
+        </tbody>
+
+<!-- avg datacenter-->
+         <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">ACI</th>
+            <th scope="col">UCS</th>
+            <th scope="col">MDS</th>
+            <th scope="col">Vmware</th>
+            <th scope="col">FIS</th>
+            <th scope="col">DataCenter AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">DataCenter</th>
+            <td>{{this.ACI}}</td>
+            <td>{{this.UCS}}</td>
+            <td>{{this.MDS}}</td>
+            <td>{{this.Vmware}}</td>
+            <td>{{this.FIS}}</td>
+            <td>{{#media ACI UCS MDS Vmware FIS}}
+                {{/media}}
+            </td>    
+          </tr>
+        </tbody>
+
+<!-- avg wifi-->
+         <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">WCS</th>
+            <th scope="col">WLC</th>
+            <th scope="col">AP</th>
+            <th scope="col">Meraki</th>
+            <th scope="col">Aruba</th>
+            <th scope="col">Wifi AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Wifi</th>
+            <td>{{this.WCS}}</td>
+            <td>{{this.WLC}}</td>
+            <td>{{this.AP}}</td>
+            <td>{{this.Meraki}}</td>
+            <td>{{this.Aruba}}</td>
+            <td>{{#media WCS WLC AP Meraki Aruba}}
+                {{/media}}
+            </td>    
+          </tr>
+        </tbody>
+
+<!-- avg routingswitching-->
+         <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Routing</th>
+            <th scope="col">Switching</th>
+            <th scope="col">VLAN</th>
+            <th scope="col">BGP</th>
+            <th scope="col">StaticRouting</th>
+            <th scope="col">Routing&Switching AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Routing&Switching</th>
+            <td>{{this.Routing}}</td>
+            <td>{{this.Switching}}</td>
+            <td>{{this.VLAN}}</td>
+            <td>{{this.BGP}}</td>
+            <td>{{this.StaticRouting}}</td>
+            <td>{{#media Routing Switching VLAN BGP StaticRouting}}
+                {{/media}}
+            </td>    
+          </tr>
+        </tbody>
+
+<!-- avg collaboration-->
+         <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">CUCM</th>
+            <th scope="col">UCCX</th>
+            <th scope="col">MediaSense</th>
+            <th scope="col">Telepresence</th>
+            <th scope="col">Webex</th>
+            <th scope="col">Collaboration AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Collaboration</th>
+            <td>{{this.CUCM}}</td>
+            <td>{{this.UCCX}}</td>
+            <td>{{this.MediaSense}}</td>
+            <td>{{this.Telepresence}}</td>
+            <td>{{this.Webex}}</td>
+            <td>{{#media CUCM UCCX MediaSense Telepresence Webex}}
+                {{/media}}
+            </td>    
+          </tr>
+        </tbody>
+
       </table>
        <!-- -->
       </div>

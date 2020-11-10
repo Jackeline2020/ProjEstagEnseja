@@ -9,7 +9,7 @@ var flash = require('connect-flash');
 var passport = require('passport');
 var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 var users = {};
-//const { handlebars } = require('hbs');
+const { handlebars } = require('hbs');
 
 // database connection
 require('./config/db');
@@ -108,6 +108,10 @@ app.use(function(req, res, next) {
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
+handlebars.registerHelper('media', function(avalue, bvalue, cvalue, dvalue, evalue) {
+   return media = (avalue + bvalue + cvalue + dvalue + evalue)/5;
+});
 
 /*handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
 
