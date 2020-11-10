@@ -13,7 +13,7 @@
 <div class="card card-data">
   <h5 class="card-header">Analistas cadastrados:</h5>
   <div class="card-body">
-    <a href="#" class="btn btn-primary card-number"><h1 class="card-text">20</h1></a>
+    <a href="#" class="btn btn-primary card-number"><h1 class="card-text">{{data.length}}</h1></a>
   </div>
 </div>
   </div>
@@ -52,12 +52,14 @@
             <td>{{this.ASM}}</td>
             <td>{{this.APM}}</td>
             <td>{{this.BIGIQ}}</td>
-            <!--script >let media=0;
-                      media=(this.LTM + this.GTM + this.ASM + this.APM + this.BIGIQ)/5;
-              alert(media);
-            document.getElementById("media").innerHTML = media;
+            <script>
+             //each(data){
+              //alert(data);
+             //}
+              //this.LTM + this.GTM + this.ASM + this.APM + this.BIGIQ;
+            //document.getElementById("media").innerHTML = media;
             
-            </script-->
+            </script>
           </tr>
         </tbody>
       </table>

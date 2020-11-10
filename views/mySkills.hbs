@@ -137,7 +137,7 @@
     </div>
   </div>
   <div id="tab4" class="tab-pane fade">
-    <div class="row">
+    <div class="row"  data-toggle="modal" data-target=".modal-wifi">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
@@ -178,7 +178,7 @@
     </div>
   </div>
   <div id="tab5" class="tab-pane fade">
-    <div class="row">
+    <div class="row"  data-toggle="modal" data-target=".modal-routingswitching">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
@@ -220,7 +220,7 @@
   </div>
 
   <div id="tab6" class="tab-pane fade">
-    <div class="row">
+    <div class="row"  data-toggle="modal" data-target=".modal-collaboration">
         <div class="table-responsive scrollbars">
           <table class="table table-hover">
             <thead>
@@ -303,26 +303,25 @@
 <div class="col-xs-12 col-md-2 col-lg-2 text-center">
   <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
 </div>
+</div>    
+        </div>
     </div>
-</div>
-           
-</div>
-</div>
 </div>
     
 <!-- modal mostra tabela, se não abre modal SECURITY-->
 <div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
-      <div class="row">
-        <div class="col-xs-12">
-        <h3>Security</h3>
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Security</h3>
 <div class="form-skill">
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput5">Firepower</label>
                     <input type="number" min="0" max="5" class="form-control" name="Firepower" value="{{data.Firepower}}">
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput5">ASA</label>
                     <input type="number" min="0" max="5" class="form-control" name="ASA" value="{{data.ASA}}">
                   </div>
@@ -341,55 +340,175 @@
 </div>
 </div>
 <div class="col-md-10 col-lg-10"></div>
-    <div class="col-xs-12 col-md-2 col-lg-2 text-center">
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
     <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>     
+        </div>
     </div>
-</div>
-</div>
-           
-</div>
-</div>
 </div>
 
 <!-- modal mostra tabela, se não abre modal DATACENTER-->
 <div class="modal fade modal-datacenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content stepper-content">
-      <div class="row">
-        <div class="col-xs-12">
-        <h3>DataCenter</h3>
+
+<div class="row">
+<div class="col-xs-12">
+<h3>DataCenter</h3>
 <div class="form-skill">
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput5">ACI</label>
                     <input type="number" min="0" max="5" class="form-control" name="ACI" value="{{data.ACI}}">
                   </div>
-                  <div class="form-group col-md-4">
+                  <div class="form-group col-md-6">
                     <label for="formGroupExampleInput5">UCS</label>
                     <input type="number" min="0" max="5" class="form-control" name="UCS" value="{{data.UCS}}">
-                  </div><div class="form-group col-md-4">
+                  </div>
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">MDS</label>
                     <input type="number" min="0" max="5" class="form-control" name="MDS" value="{{data.MDS}}">
                   </div>
-                  </div><div class="form-group col-md-4">
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">Vmware</label>
                     <input type="number" min="0" max="5" class="form-control" name="Vmware" value="{{data.Vmware}}">
-                  </div><div class="form-group col-md-4">
+                  </div>
+                  <div class="form-group col-md-4">
                     <label for="formGroupExampleInput5">FIS</label>
                     <input type="number" min="0" max="5" class="form-control" name="FIS" value="{{data.FIS}}">
                   </div>
 </div>
 </div>
 <div class="col-md-10 col-lg-10"></div>
-    <div class="col-xs-12 col-md-2 col-lg-2 text-center">
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
     <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal WIFI-->
+<div class="modal fade modal-wifi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Wifi</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">WCS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="WCS" value="{{data.WCS}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">WLC</label>
+                    <input type="number" min="0" max="5" class="form-control" name="WLC" value="{{data.WLC}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">AP</label>
+                    <input type="number" min="0" max="5" class="form-control" name="AP" value="{{data.AP}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Meraki</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Meraki" value="{{data.Meraki}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Aruba</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Aruba" value="{{data.Aruba}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal ROUTINGSWITCHING-->
+<div class="modal fade modal-routingswitching" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Routing&Switching</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">Routing</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Routing" value="{{data.Routing}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">Switching</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Switching" value="{{data.Switching}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">VLAN</label>
+                    <input type="number" min="0" max="5" class="form-control" name="VLAN" value="{{data.VLAN}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">BGP</label>
+                    <input type="number" min="0" max="5" class="form-control" name="BGP" value="{{data.BGP}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">StaticRouting</label>
+                    <input type="number" min="0" max="5" class="form-control" name="StaticRouting" value="{{data.StaticRouting}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal COLLABORATION-->
+<div class="modal fade modal-collaboration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Collaboration</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">CUCM</label>
+                    <input type="number" min="0" max="5" class="form-control" name="CUCM" value="{{data.CUCM}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">UCCX</label>
+                    <input type="number" min="0" max="5" class="form-control" name="UCCX" value="{{data.UCCX}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">MediaSense</label>
+                    <input type="number" min="0" max="5" class="form-control" name="MediaSense" value="{{data.MediaSense}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Telepresence</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Telepresence" value="{{data.Telepresence}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Webex</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Webex" value="{{data.Webex}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+    </form>      
+        </div>
     </div>
 </div>
 </div>
-     </form>      
-</div>
-</div>
-</div>
-
 
 <!---->
 {{else}}
