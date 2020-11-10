@@ -133,7 +133,7 @@ a{
 .panel-primary.panel {
   border-left: 4px solid #e100ff;
 }
-.form-group .dropdown-toggle.form-control, .form-group-lg select.form-control, .form-group-sm select.form-control, select.form-control, .form-control:hover{
+.form-group .dropdown-toggle.form-control, .form-group-lg select.form-control, .form-group-sm select.form-control, select.form-control, .form-control:hover, .form-control:active, .form-control{
   border-color: #e100ff!important;
 }
 .progress-step:before{
