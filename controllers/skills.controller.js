@@ -6,6 +6,8 @@ exports.list = (req, res) => {
     Technologies.find()
         .then(data => {
             var message = "";
+            console.log(data);
+            localStorage.setItem(data, data);
             if (data === undefined || data.length == 0) message = "No technologies found!";
             else message = 'Technologies successfully retrieved';
 
