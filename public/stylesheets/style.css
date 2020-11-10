@@ -127,7 +127,15 @@ a{
   right: 100%;
   margin-left: -100px; /*.animate width*/
 }
-
+.panel-heading[data-toggle=collapse]:before, .panel-heading[data-toggle=collapse]:hover .panel-title{
+  color: #e100ff!important;
+}
+.panel-primary.panel {
+  border-left: 4px solid #e100ff;
+}
+.form-group .dropdown-toggle.form-control, .form-group-lg select.form-control, .form-group-sm select.form-control, select.form-control, .form-control:hover{
+  border-color: #e100ff!important;
+}
 .progress-step:before{
   width: 50px;
   height: 50px;
@@ -162,7 +170,11 @@ padding-left: 0px!important;
 .nav-tabs-section>li.active>a, .nav-tabs-section>li.active>a:focus, .nav-tabs-section>li.active>a:hover {
     transform: scale(1.2)!important;
     font-weight: 1000!important;
-    background-color: #0f71f2!important;
+    background-color: #8f00b3!important;
+}
+.nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover{
+  border-bottom: #e100ff!important;
+
 }
 .nav-tabs-section{
   background-color: 	rgb(0,0,0, 0.3);
