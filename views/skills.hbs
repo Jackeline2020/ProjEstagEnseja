@@ -24,182 +24,182 @@
 <br>
     
 <!-- Modal -->
-<script> 
-function somar(item) {
-    total += item;
-}
-
-data.forEach(somar);
-alert(total);
-</script>
-
 {{#each data}}
 <div class="modal fade" id="ExemploModalCentralizado{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title" id="TituloModalCentralizado">{{this.name}}</h4>
-        <h5 class="modal-title" id="TituloModalCentralizado">{{this.email}}</h5>
+              <div class="panel-subtitle">{{this.email}}</div>
       </div>
       <div class="modal-body">
         <!-- -->
-        <table class="table table-hover table-dark">
+        <table class="table table-dark">
 <!-- avg f5-->
         <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
             <th scope="col">LTM</th>
             <th scope="col">GTM</th>
             <th scope="col">ASM</th>
             <th scope="col">APM</th>
             <th scope="col">BIG-IQ</th>
-            <th scope="col">F5 AVG</th>
+            <th scope="col">AVG</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">F5</th>
+          <tr class="line-default">
+            <th class="destaque" scope="row">F5</th>
             <td>{{this.LTM}}</td>
             <td>{{this.GTM}}</td>
             <td>{{this.ASM}}</td>
             <td>{{this.APM}}</td>
             <td>{{this.BIGIQ}}</td>
-            <td>{{#media LTM GTM ASM APM BIGIQ}}
+            <th class="destaque">{{#media LTM GTM ASM APM BIGIQ}}
                 {{/media}}
-            </td>    
+            </th>    
           </tr>
         </tbody>
-
+        </table>
 <!-- avg security-->
+        <table class="table table-dark">
+
          <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
             <th scope="col">Firepower</th>
             <th scope="col">ASA</th>
             <th scope="col">ISE</th>
             <th scope="col">Umbrella</th>
             <th scope="col">NGIPS</th>
-            <th scope="col">Security AVG</th>
+            <th scope="col">AVG</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Security</th>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Security</th>
             <td>{{this.Firepower}}</td>
             <td>{{this.ASA}}</td>
             <td>{{this.ISE}}</td>
             <td>{{this.Umbrella}}</td>
             <td>{{this.NGIPS}}</td>
-            <td>{{#media Firepower ASA ISE Umbrella NGIPS}}
+            <th class="destaque">{{#media Firepower ASA ISE Umbrella NGIPS}}
                 {{/media}}
-            </td>    
+            </th>    
           </tr>
         </tbody>
-
+        </table>
 <!-- avg datacenter-->
+        <table class="table table-dark">
+
          <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
             <th scope="col">ACI</th>
             <th scope="col">UCS</th>
             <th scope="col">MDS</th>
             <th scope="col">Vmware</th>
             <th scope="col">FIS</th>
-            <th scope="col">DataCenter AVG</th>
+            <th  scope="col">AVG</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">DataCenter</th>
+          <tr class="line-default">
+            <th class="destaque" scope="row">DataCenter</th>
             <td>{{this.ACI}}</td>
             <td>{{this.UCS}}</td>
             <td>{{this.MDS}}</td>
             <td>{{this.Vmware}}</td>
             <td>{{this.FIS}}</td>
-            <td>{{#media ACI UCS MDS Vmware FIS}}
+            <th class="destaque">{{#media ACI UCS MDS Vmware FIS}}
                 {{/media}}
-            </td>    
+            </th>    
           </tr>
         </tbody>
-
+        </table>
 <!-- avg wifi-->
+        <table class="table table-dark">
+
          <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
             <th scope="col">WCS</th>
             <th scope="col">WLC</th>
             <th scope="col">AP</th>
             <th scope="col">Meraki</th>
             <th scope="col">Aruba</th>
-            <th scope="col">Wifi AVG</th>
+            <th scope="col">AVG</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Wifi</th>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Wifi</th>
             <td>{{this.WCS}}</td>
             <td>{{this.WLC}}</td>
             <td>{{this.AP}}</td>
             <td>{{this.Meraki}}</td>
             <td>{{this.Aruba}}</td>
-            <td>{{#media WCS WLC AP Meraki Aruba}}
+            <th class="destaque">{{#media WCS WLC AP Meraki Aruba}}
                 {{/media}}
-            </td>    
+            </th>    
           </tr>
         </tbody>
-
+        </table>
 <!-- avg routingswitching-->
+        <table class="table table-dark">
+
          <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
             <th scope="col">Routing</th>
             <th scope="col">Switching</th>
             <th scope="col">VLAN</th>
             <th scope="col">BGP</th>
             <th scope="col">StaticRouting</th>
-            <th scope="col">Routing&Switching AVG</th>
+            <th scope="col">AVG</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Routing&Switching</th>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Routing&Switching</th>
             <td>{{this.Routing}}</td>
             <td>{{this.Switching}}</td>
             <td>{{this.VLAN}}</td>
             <td>{{this.BGP}}</td>
             <td>{{this.StaticRouting}}</td>
-            <td>{{#media Routing Switching VLAN BGP StaticRouting}}
+            <th class="destaque">{{#media Routing Switching VLAN BGP StaticRouting}}
                 {{/media}}
-            </td>    
+            </th>    
           </tr>
         </tbody>
-
+        </table>
 <!-- avg collaboration-->
+        <table class="table table-dark">
+
          <thead>
-          <tr>
-            <th scope="col">#</th>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
             <th scope="col">CUCM</th>
             <th scope="col">UCCX</th>
             <th scope="col">MediaSense</th>
             <th scope="col">Telepresence</th>
             <th scope="col">Webex</th>
-            <th scope="col">Collaboration AVG</th>
+            <th scope="col">AVG</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Collaboration</th>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Collaboration</th>
             <td>{{this.CUCM}}</td>
             <td>{{this.UCCX}}</td>
             <td>{{this.MediaSense}}</td>
             <td>{{this.Telepresence}}</td>
             <td>{{this.Webex}}</td>
-            <td>{{#media CUCM UCCX MediaSense Telepresence Webex}}
+            <th class="destaque">{{#media CUCM UCCX MediaSense Telepresence Webex}}
                 {{/media}}
-            </td>    
+            </th>    
           </tr>
         </tbody>
-
       </table>
        <!-- -->
       </div>

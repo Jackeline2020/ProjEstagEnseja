@@ -1,15 +1,13 @@
 
 const Technologies = require('../models/skills');
 
-
-
 // retrieve and return all technologies.
 exports.list = (req, res) => {
     Technologies.find()
         .then(data => {
             var message = "";
             if (data === undefined || data.length == 0) message = "No technologies found!";
-            else message = basecoat.toast('Technologies successfully retrieved.').trigger('show', [5000]);
+            else message = 'Technologies successfully retrieved';
 
             res.render('skills', {data: data});
 
@@ -21,7 +19,7 @@ exports.list = (req, res) => {
         }).catch(err => {
         res.status(500).send({
             success: false,
-            message: err.message || basecoat.toast('Some error occurred while retrieving technologies.').trigger('show', [5000])
+            message: err.message || "Some error occurred while retrieving technologies."
         });
     });
 };
@@ -36,7 +34,7 @@ exports.create = function (req, res) {
             var $toast = basecoat.toast('This is a simple toast.');
                 $toast.trigger('show', [5000]); 
             */
-            res.json({ success: false, message: basecoat.toast('This email has no available.').trigger('show', [5000]) });
+            res.json({ success: false, message: 'This email has no available' });
         }else{
 
     // create a technologies
