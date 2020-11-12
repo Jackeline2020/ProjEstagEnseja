@@ -7,7 +7,7 @@ exports.list = (req, res) => {
         .then(data => {
             var message = "";
             console.log(data);
-            localStorage.setItem(data, data);
+      
             if (data === undefined || data.length == 0) message = "No technologies found!";
             else message = 'Technologies successfully retrieved';
 
@@ -36,7 +36,7 @@ exports.create = function (req, res) {
             var $toast = basecoat.toast('This is a simple toast.');
                 $toast.trigger('show', [5000]); 
             */
-            res.json({ success: false, message: 'This email has no available' });
+            res.render('<div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>');
         }else{
 
     // create a technologies

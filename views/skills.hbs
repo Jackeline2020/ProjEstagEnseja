@@ -1,4 +1,5 @@
 {{#if user}}
+
 <br>
 <div class="row">
   <div class="col-md-3 col-numbers">
@@ -55,7 +56,7 @@
             <td>{{this.ASM}}</td>
             <td>{{this.APM}}</td>
             <td>{{this.BIGIQ}}</td>
-            <th class="destaque">{{#media LTM GTM ASM APM BIGIQ}}
+            <th class="destaque avg-f5">{{#media LTM GTM ASM APM BIGIQ}}
                 {{/media}}
             </th>    
           </tr>
@@ -83,7 +84,7 @@
             <td>{{this.ISE}}</td>
             <td>{{this.Umbrella}}</td>
             <td>{{this.NGIPS}}</td>
-            <th class="destaque">{{#media Firepower ASA ISE Umbrella NGIPS}}
+            <th class="destaque avg-security">{{#media Firepower ASA ISE Umbrella NGIPS}}
                 {{/media}}
             </th>    
           </tr>
@@ -111,7 +112,7 @@
             <td>{{this.MDS}}</td>
             <td>{{this.Vmware}}</td>
             <td>{{this.FIS}}</td>
-            <th class="destaque">{{#media ACI UCS MDS Vmware FIS}}
+            <th class="destaque avg-datacenter">{{#media ACI UCS MDS Vmware FIS}}
                 {{/media}}
             </th>    
           </tr>
@@ -139,7 +140,7 @@
             <td>{{this.AP}}</td>
             <td>{{this.Meraki}}</td>
             <td>{{this.Aruba}}</td>
-            <th class="destaque">{{#media WCS WLC AP Meraki Aruba}}
+            <th class="destaque avg-wifi">{{#media WCS WLC AP Meraki Aruba}}
                 {{/media}}
             </th>    
           </tr>
@@ -167,7 +168,7 @@
             <td>{{this.VLAN}}</td>
             <td>{{this.BGP}}</td>
             <td>{{this.StaticRouting}}</td>
-            <th class="destaque">{{#media Routing Switching VLAN BGP StaticRouting}}
+            <th class="destaque avg-routing">{{#media Routing Switching VLAN BGP StaticRouting}}
                 {{/media}}
             </th>    
           </tr>
@@ -195,7 +196,7 @@
             <td>{{this.MediaSense}}</td>
             <td>{{this.Telepresence}}</td>
             <td>{{this.Webex}}</td>
-            <th class="destaque">{{#media CUCM UCCX MediaSense Telepresence Webex}}
+            <th class="destaque avg-collaboration">{{#media CUCM UCCX MediaSense Telepresence Webex}}
                 {{/media}}
             </th>    
           </tr>
@@ -251,7 +252,8 @@
                 <td>{{this.GTM}}</td>
                 <td>{{this.ASM}}</td>
                 <td>{{this.APM}}</td>
-                <td>{{this.BIGIQ}}</td>
+                <td >{{this.BIGIQ}}</td>
+
               </tr>
               {{/each}}
               <!---->
@@ -300,141 +302,10 @@
                 <td>{{this.ISE}}</td>
                 <td>{{this.Umbrella}}</td>
                 <td>{{this.NGIPS}}</td>
+
               </tr>
               {{/each}}
               <!---->
-              <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
-                            <tr>
-                <td>aaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-                <td>aaaaaaaaaaa</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -481,6 +352,7 @@
                 <td>{{this.MDS}}</td>
                 <td>{{this.Vmware}}</td>
                 <td>{{this.FIS}}</td>
+  
               </tr>
               {{/each}}
               <!---->
@@ -531,6 +403,7 @@
                 <td>{{this.AP}}</td>
                 <td>{{this.Meraki}}</td>
                 <td>{{this.Aruba}}</td>
+
               </tr>
               {{/each}}
               <!---->
@@ -581,6 +454,7 @@
                 <td>{{this.VLAN}}</td>
                 <td>{{this.BGP}}</td>
                 <td>{{this.StaticRouting}}</td>
+   
               </tr>
               {{/each}}
               <!---->
@@ -631,6 +505,7 @@
                 <td>{{this.MediaSense}}</td>
                 <td>{{this.Telepresence}}</td>
                 <td>{{this.Webex}}</td>
+     
               </tr>
               {{/each}}
               <!---->
