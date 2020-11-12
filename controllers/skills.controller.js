@@ -6,8 +6,6 @@ exports.list = (req, res) => {
     Technologies.find()
         .then(data => {
             var message = "";
-            console.log(data);
-      
             if (data === undefined || data.length == 0) message = "No technologies found!";
             else message = 'Technologies successfully retrieved';
 
@@ -17,7 +15,7 @@ exports.list = (req, res) => {
                 //success: true,
                 //message: message,
                 //data: data
-           // });
+            // });
         }).catch(err => {
         res.status(500).send({
             success: false,
