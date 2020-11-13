@@ -143,8 +143,11 @@ a{
   background-color: rgb(0,0,0, 0.1);
 }
 .destaque{
-  color: #0fc8f2;
+  color: #e100ff;
 }
+.color-tooltip + .tooltip > .tooltip-inner {background-color: #008770!important;}
+.color-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:#008770!important; }
+
 .line-title>tr, .line-title>.th{
   border: none!important;
 }
