@@ -1,21 +1,14 @@
 
 const Technologies = require('../models/skills');
 
-// retrieve and return all technologies.
+// retrieve and return all skills.
 exports.list = (req, res) => {
     Technologies.find()
         .then(data => {
             var message = "";
             if (data === undefined || data.length == 0) message = "No technologies found!";
-            else message = 'Technologies successfully retrieved';
-
-            res.render('skills', {data: data});
-
-            //res.send({
-                //success: true,
-                //message: message,
-                //data: data
-            // });
+            else res.render('skills', {data: data});
+        
         }).catch(err => {
         res.status(500).send({
             success: false,
@@ -24,17 +17,13 @@ exports.list = (req, res) => {
     });
 };
 
-// create a new Technologies.
+// create a new skills.
 exports.create = function (req, res) {
 
     Technologies.findOne({ 'email': req.body.email })
     .then(data => {
         if(data){
-            /*É AQUI
-            var $toast = basecoat.toast('This is a simple toast.');
-                $toast.trigger('show', [5000]); 
-            */
-            res.render('<div class="alert alert-danger" role="alert">A simple danger alert—check it out!</div>');
+            res.render('mySkills', {data: data});
         }else{
 
     // create a technologies
@@ -84,15 +73,10 @@ exports.create = function (req, res) {
             Webex: req.body.Webex
     });
 
-    // save technologies in the database.
+    // save skills in the database.
     technologies.save()
         .then(data => {
             res.redirect('/skills');
-            /*res.send({
-                success: true,
-                message: 'Technologies successfully created',
-                data: data
-            });*/
         }).catch(err => {
             res.status(500).send({
                 success: false,
@@ -105,32 +89,18 @@ exports.create = function (req, res) {
 
 };
 
-// find a single technologies with a id.
+// find a single skills with a id.
 exports.show = (req, res) => {
     Technologies.findById(req.params.id)
         .then(data => {
             if(!data) {
-                res.redirect('/skills');
-
-                /*return res.status(404).send({
-                    success: false,
-                    message: "Technologies not found with id " + req.params.id
-                });*/
+                res.redirect('/index');
             }
             res.render('mySkills', {data: data});
 
-           /* res.send({
-                success: true,
-                message: 'Technologies successfully retrieved',
-                data: data
-            }); */
         }).catch(err => {
         if(err.kind === 'ObjectId') {
-            res.redirect('/skills');
-            /*return res.status(404).send({
-                success: false,
-                message: "Technologies not found with id " + req.params.id
-            });*/
+            res.redirect('/index');
         }
         return res.status(500).send({
             success: false,
@@ -150,12 +120,8 @@ exports.update = (req, res) => {
                     message: "Technologies not found with id " + req.params.id
                 });
             }*/
-            res.redirect('/skills');
+            res.render('mySkills', {data: data});
 
-           /* res.send({
-                success: true,
-                data: data
-            }); */
         }).catch(err => {
         if(err.kind === 'ObjectId') {
             return res.status(404).send({

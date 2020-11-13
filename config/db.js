@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-let database_url = 'mongodb://localhost:27017/ensejadb';
+let database_url = 'mongodb://127.0.0.1:27017/ensejadb';
 
 // Connecting to the database
 mongoose.connect(database_url, {
