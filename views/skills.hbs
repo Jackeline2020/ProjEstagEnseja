@@ -211,8 +211,7 @@
   </div>
 </div>
 {{/each}}
-<script type="tetx/javascript">
-</script> 
+
 <!---->
 <div class="panel panel-primary">
     <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
@@ -253,7 +252,6 @@
                 <td>{{this.ASM}}</td>
                 <td>{{this.APM}}</td>
                 <td >{{this.BIGIQ}}</td>
-
               </tr>
               {{/each}}
               <!---->
@@ -292,7 +290,7 @@
            <tbody>
               <!-- fazer for each aqui-->
                 {{#each data}}
-              <tr>
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.job}}</td>
@@ -302,7 +300,6 @@
                 <td>{{this.ISE}}</td>
                 <td>{{this.Umbrella}}</td>
                 <td>{{this.NGIPS}}</td>
-
               </tr>
               {{/each}}
               <!---->
@@ -342,7 +339,7 @@
             <tbody>
               <!-- fazer for each aqui-->
                 {{#each data}}
-              <tr>
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.job}}</td>
@@ -352,7 +349,6 @@
                 <td>{{this.MDS}}</td>
                 <td>{{this.Vmware}}</td>
                 <td>{{this.FIS}}</td>
-  
               </tr>
               {{/each}}
               <!---->
@@ -393,7 +389,7 @@
             <tbody>
               <!-- fazer for each aqui-->
                 {{#each data}}
-              <tr>
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.job}}</td>
@@ -403,7 +399,6 @@
                 <td>{{this.AP}}</td>
                 <td>{{this.Meraki}}</td>
                 <td>{{this.Aruba}}</td>
-
               </tr>
               {{/each}}
               <!---->
@@ -444,7 +439,7 @@
             <tbody>
               <!-- fazer for each aqui-->
                 {{#each data}}
-              <tr>
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.job}}</td>
@@ -454,7 +449,6 @@
                 <td>{{this.VLAN}}</td>
                 <td>{{this.BGP}}</td>
                 <td>{{this.StaticRouting}}</td>
-   
               </tr>
               {{/each}}
               <!---->
@@ -495,7 +489,7 @@
             <tbody>
               <!-- fazer for each aqui-->
                 {{#each data}}
-              <tr>
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
                 <td>{{this.job}}</td>
@@ -505,7 +499,6 @@
                 <td>{{this.MediaSense}}</td>
                 <td>{{this.Telepresence}}</td>
                 <td>{{this.Webex}}</td>
-     
               </tr>
               {{/each}}
               <!---->
