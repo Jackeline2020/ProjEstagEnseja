@@ -1,5 +1,4 @@
 {{#if user}}
-
 <br>
 <div class="row">
   <div class="col-md-3 col-numbers">
@@ -236,12 +235,13 @@
                 <th>ASM</th>
                 <th>APM</th>
                 <th>BIG IQ</th>
+                <th>Update</th>
               </tr>
             </thead>
             <!-- Botão para acionar modal -->
             <tbody>
               <!-- fazer for each aqui-->
-                {{#each data}}
+              {{#each data}}
               <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
                 <td>{{this.name}}</td>
                 <td>{{this.email}}</td>
@@ -251,7 +251,8 @@
                 <td>{{this.GTM}}</td>
                 <td>{{this.ASM}}</td>
                 <td>{{this.APM}}</td>
-                <td >{{this.BIGIQ}}</td>
+                <td>{{this.BIGIQ}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
               </tr>
               {{/each}}
               <!---->
@@ -276,15 +277,16 @@
           <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
             <thead>
                <tr>
-                <th data-field="name">Name</th>
-                <th data-field="email">Email</th>
-                <th data-field="job">Job</th>
-                <th data-field="office">Office</th>
-                <th data-field="firepower">Firepower</th>
-                <th data-field="asa">ASA</th>
-                <th data-field="ise">ISE</th>
-                <th data-field="umbrela">Umbrella</th>
-                <th data-field="ngips">NGIPS</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Firepower</th>
+                <th>ASA</th>
+                <th>ISE</th>
+                <th>Umbrella</th>
+                <th>NGIPS</th>
+                <th>Update</th>
               </tr>
             </thead>
            <tbody>
@@ -300,6 +302,7 @@
                 <td>{{this.ISE}}</td>
                 <td>{{this.Umbrella}}</td>
                 <td>{{this.NGIPS}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
               </tr>
               {{/each}}
               <!---->
@@ -334,6 +337,7 @@
                 <th>MDS</th>
                 <th>Vmware</th>
                 <th>FIS</th>
+                <th>Update</th>
               </tr>
             </thead>
             <tbody>
@@ -349,6 +353,7 @@
                 <td>{{this.MDS}}</td>
                 <td>{{this.Vmware}}</td>
                 <td>{{this.FIS}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
               </tr>
               {{/each}}
               <!---->
@@ -384,6 +389,7 @@
                 <th>AP</th>
                 <th>Meraki</th>
                 <th>Aruba</th>
+                <th>Update</th>
               </tr>
             </thead>
             <tbody>
@@ -399,6 +405,7 @@
                 <td>{{this.AP}}</td>
                 <td>{{this.Meraki}}</td>
                 <td>{{this.Aruba}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
               </tr>
               {{/each}}
               <!---->
@@ -434,6 +441,7 @@
                 <th>VLAN</th>
                 <th>BGP</th>
                 <th>StaticRouting</th>
+                <th>Update</th>
               </tr>
             </thead>
             <tbody>
@@ -449,6 +457,7 @@
                 <td>{{this.VLAN}}</td>
                 <td>{{this.BGP}}</td>
                 <td>{{this.StaticRouting}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
               </tr>
               {{/each}}
               <!---->
@@ -484,6 +493,7 @@
                 <th>MediaSense</th>
                 <th>Telepresence</th>
                 <th>Webex</th>
+                <th>Update</th>
               </tr>
             </thead>
             <tbody>
@@ -499,6 +509,7 @@
                 <td>{{this.MediaSense}}</td>
                 <td>{{this.Telepresence}}</td>
                 <td>{{this.Webex}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
               </tr>
               {{/each}}
               <!---->

@@ -45,6 +45,9 @@ let skillsSchema = new Schema({
     MediaSense: {type: Number, required: false},
     Telepresence: {type: Number, required: false},
     Webex: {type: Number, required: false}
+},
+{
+    timestamps: {type: Date, required: true}
 });
 
 // Export the model

@@ -10,6 +10,8 @@ var passport = require('passport');
 var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 var users = {};
 const { handlebars } = require('hbs');
+const moment = require('moment'); //Receber moment
+const cron = require("node-cron");
 
 // database connection
 require('./config/db');
@@ -84,6 +86,8 @@ var graph = require('./API/graph');
 
 var app = express();
 
+cron.schedule("0 0 * * * *", () => console.log("Diariamente à meia-noite"));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(session({
@@ -108,9 +112,26 @@ app.use(function(req, res, next) {
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+//Tell Express that we're running behind a
+//reverse proxy that supplies https for you
+app.set('trust proxy', true);
 
 handlebars.registerHelper('media', function(avalue, bvalue, cvalue, dvalue, evalue) {
    return media = (avalue + bvalue + cvalue + dvalue + evalue)/5;
+});
+
+var DateFormats = {
+  long: "dddd DD/MM/YYYY HH:mm"
+};
+
+handlebars.registerHelper("formatDate", function(datetime, format) {
+    if (moment) {
+      format = DateFormats[format] || format;
+      return moment(datetime).format(format);
+    }
+    else {
+      return datetime;
+    }
 });
 
 /*handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
@@ -159,6 +180,15 @@ app.use(function(req, res, next) {
     res.locals.user = req.user.profile;
   }
   next();
+});
+
+//Add middleware that will trick Express
+//into thinking the request is secure
+app.use(function(req, res, next) {
+  if(req.headers['x-arr-ssl'] && !req.headers['x-forwarded-proto']) {
+    req.headers['x-forwarded-proto'] = 'https';
+  }
+  return next();
 });
 
 app.use('/', indexRouter);
