@@ -1,6 +1,0 @@
-class skillsGSC {
-    constructor() {
-    }
-  }
- 
-  
