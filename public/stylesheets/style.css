@@ -9,15 +9,40 @@
   padding-left: 0px!important;
   padding-top: 20px!important;
   margin-top: 50px;
+  height: 240px
 }
-
+.fa{
+  margin-left: 8px!important;
+}
 body{
   background-image: url("../assets/dark_polygon14.png");
 }
+#ensejaTitle{
+  margin-top: 40px;
+}
+.titulos{
+  margin-left: 69px;
+}
+.imgJumb{
+  margin-top: 10px;
+}
+a:link{
+  text-decoration: none;
+  text-decoration-style: none;
+}
+th, td{
+  text-align: center;
+}
 
+.nav-tabs > li {
+  float:none;
+  display:inline-block;
+  zoom:1;
+}
 
-
-
+.nav-tabs {
+  text-align:center;
+}
 /*****************************/
 .quad_left {
   background-color: rgba(0,0,0, 1.0);
@@ -59,6 +84,9 @@ a, a:focus, a:hover{
 
   background-color: #9f00c7!important;
 }
+.bg-primary, .btn-primary{
+background-color: #8f00b3!important;
+}
 .navbar .caret:before {
   margin-top: 7px;
   color: #e100ff!important;
@@ -83,7 +111,9 @@ a{
   padding: 20px!important;
 }
 
-
+.button-full{
+  width: 100%;
+}
 .form-skill {
 
   -webkit-transition: all 1s ease;
@@ -97,24 +127,77 @@ a{
   right: 100%;
   margin-left: -100px; /*.animate width*/
 }
+.panel-heading[data-toggle=collapse]:before, .panel-heading[data-toggle=collapse]:hover .panel-title{
+  color: #e100ff!important;
+}
+.panel-primary.panel {
+  border-left: 4px solid #e100ff;
+}
+.form-group .dropdown-toggle.form-control, .form-group-lg select.form-control, .form-group-sm select.form-control, select.form-control, .form-control:hover, .form-control:active, .form-control{
+  border-color: #e100ff!important;
+}
+.line-title{
+  background-color: rgba(126, 0, 158, 0.678);
+}
+.line-default{
+  background-color: rgb(0,0,0, 0.1);
+}
+.destaque{
+  color: #e100ff;
+}
+.color-tooltip + .tooltip > .tooltip-inner {background-color: #008770!important;}
+.color-tooltip + .tooltip > .tooltip-arrow { border-bottom-color:#008770!important; }
 
+.line-title>tr, .line-title>.th{
+  border: none!important;
+}
 .progress-step:before{
   width: 50px;
   height: 50px;
   padding-top: 13px!important;
-  background-color: #0f71f2!important;
+  background-color: #8f00b3!important;
+}
+.col-numbers{
+  padding-right: 0px!important;
+}
+.col-chart{
+padding-left: 0px!important;
+}
+.card-number{
+  height: 70px;
+  padding-top: 17px;
+}
+.card-data{
+  align-items: center;
+  text-align: center;
+  min-height: 150px!important;
+  background-color: rgb(70, 70, 70);
+  border-radius: 5px;
+  padding-top: 10px;
+  padding: 10px;
+
 }
 .progress-step{
   padding-top: 13px!important;
+  font-size: 12px!important;
+  color: #fff;
 }
-.nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover {
-    transform: scale(1.2);
+.nav-tabs-section>li.active>a, .nav-tabs-section>li.active>a:focus, .nav-tabs-section>li.active>a:hover {
+    transform: scale(1.2)!important;
     font-weight: 1000!important;
+    background-color: #8f00b3!important;
+}
+.nav-tabs.nav-tabs>li.active>a, .nav-tabs.nav-tabs>li.active>a:focus, .nav-tabs.nav-tabs>li.active>a:hover{
+  border-bottom: #e100ff!important;
+
+}
+.nav-tabs-section{
+  background-color: 	rgb(0,0,0, 0.3);
 }
 .icone-dash{
   width: 100px!important;
 }
-.card{
+.card-home{
   background-color: rgb(70, 70, 70);
   border-radius: 5px;
   padding-top: 10px;

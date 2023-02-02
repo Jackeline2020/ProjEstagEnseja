@@ -1,0 +1,516 @@
+{{#if user}}
+<br>
+
+<h1 class="text-center"> My Skills </h1>
+<br>
+<div class="nav-tabs-responsive scrollbars">
+  <ul class="nav nav-tabs nav-tabs nav-tabs-section">
+    <li class="active"><a data-toggle="tab" href="#tab1">F5</a></li>
+    <li><a data-toggle="tab" href="#tab2">Security</a></li>
+    <li><a data-toggle="tab" href="#tab3">DataCenter</a></li>
+    <li><a data-toggle="tab" href="#tab4">Wifi</a></li>
+    <li><a data-toggle="tab" href="#tab5">Routing&Switching</a></li>
+    <li><a data-toggle="tab" href="#tab6">Collaboration</a></li>
+  </ul>
+</div>
+
+<div class="tab-content">
+  
+  <div id="tab1" class="tab-pane fade in active">
+    <div class="row" data-toggle="modal" data-target=".modal-f5">
+   <div class="table-responsive scrollbars">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>LTM</th>
+                <th>GTM</th>
+                <th>ASM</th>
+                <th>APM</th>
+                <th>BIG IQ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+              <tr>                
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.LTM}}</td>
+                <td>{{data.GTM}}</td>
+                <td>{{data.ASM}}</td>
+                <td>{{data.APM}}</td>
+                <td>{{data.BIGIQ}}</td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
+              </tr>
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+
+    </div>
+  </div>
+  <div id="tab2" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-security">
+   <div class="table-responsive scrollbars">
+          <table class="table table-hover">
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Firepower</th>
+                <th>ASA</th>
+                <th>ISE</th>
+                <th>Umbrella</th>
+                <th>NGIPS</th>
+              </tr>
+            </thead>
+           <tbody>
+              <!-- fazer for each aqui-->
+              <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.Firepower}}</td>
+                <td>{{data.ASA}}</td>
+                <td>{{data.ISE}}</td>
+                <td>{{data.Umbrella}}</td>
+                <td>{{data.NGIPS}}</td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
+              </tr>
+            
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+
+    </div>
+  </div>
+  <div id="tab3" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-datacenter">
+
+ <div class="table-responsive scrollbars">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>ACI</th>
+                <th>UCS</th>
+                <th>MDS</th>
+                <th>Vmware</th>
+                <th>FIS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+              <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.ACI}}</td>
+                <td>{{data.UCS}}</td>
+                <td>{{data.MDS}}</td>
+                <td>{{data.Vmware}}</td>
+                <td>{{data.FIS}}</td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
+              </tr>
+            
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+
+    </div>
+  </div>
+  <div id="tab4" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-wifi">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>WCS</th>
+                <th>WLC</th>
+                <th>AP</th>
+                <th>Meraki</th>
+                <th>Aruba</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+              <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.WCS}}</td>
+                <td>{{data.WLC}}</td>
+                <td>{{data.AP}}</td>
+                <td>{{data.Meraki}}</td>
+                <td>{{data.Aruba}}</td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
+              </tr>
+            
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+
+
+    </div>
+  </div>
+  <div id="tab5" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-routingswitching">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover">
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Routing</th>
+                <th>Switching</th>
+                <th>VLAN</th>
+                <th>BGP</th>
+                <th>StaticRouting</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+              <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.Routing}}</td>
+                <td>{{data.Switching}}</td>
+                <td>{{data.VLAN}}</td>
+                <td>{{data.BGP}}</td>
+                <td>{{data.StaticRouting}}</td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
+              </tr>
+            
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+
+
+    </div>
+  </div>
+
+  <div id="tab6" class="tab-pane fade">
+    <div class="row"  data-toggle="modal" data-target=".modal-collaboration">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover">
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>CUCM</th>
+                <th>UCCX</th>
+                <th>MediaSense</th>
+                <th>Telepresence</th>
+                <th>Webex</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+              <tr>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.job}}</td>
+                <td>{{data.office}}</td>
+                <td>{{data.CUCM}}</td>
+                <td>{{data.UCCX}}</td>
+                <td>{{data.MediaSense}}</td>
+                <td>{{data.Telepresence}}</td>
+                <td>{{data.Webex}}</td>
+                <!--td><i class="fa fa-edit" aria-hidden="true"></i><i class="fa fa-trash" aria-hidden="true"></i></td-->
+
+              </tr>
+            
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--div class="col-md-5"></div>
+        <div class="col-xs-12 col-md-2 col-lg-2 text-center">
+            <form action="/skills/delete/{{user._id}}" method="POST">
+            <button type="submit" onclick="return alert('Are You sure?')" class="btn button-full btn-danger btn-block">Delete</button>
+            </form>
+        </div>
+  </div-->
+</div>
+
+<!-- modal mostra tabela, se não abre modal - update  F5-->
+<div class="modal fade modal-f5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content stepper-content">
+            <form action="/skills/put/{{user._id}}" method="POST">
+<div class="row">
+<div class="col-xs-12">
+<h3>F5</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">LTM</label>
+                    <input type="number" min="0" max="5" class="form-control" name="LTM" value="{{data.LTM}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">GTM</label>
+                    <input type="number" min="0" max="5" class="form-control" name="GTM" value="{{data.GTM}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">ASM</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ASM" value="{{data.ASM}}">
+                 </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">APM</label>
+                    <input type="number" min="0" max="5" class="form-control" name="APM" value="{{data.APM}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">BIG-IQ</label>
+                    <input type="number" min="0" max="5" class="form-control" name="BIGIQ" value="{{data.BIGIQ}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+  <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>    
+        </div>
+    </div>
+</div>
+    
+<!-- modal mostra tabela, se não abre modal SECURITY-->
+<div class="modal fade modal-security" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Security</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">Firepower</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Firepower" value="{{data.Firepower}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">ASA</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ASA" value="{{data.ASA}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">ISE</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ISE" value="{{data.ISE}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Umbrella</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Umbrella" value="{{data.Umbrella}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">NGIPS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="NGIPS" value="{{data.NGIPS}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>     
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal DATACENTER-->
+<div class="modal fade modal-datacenter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>DataCenter</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">ACI</label>
+                    <input type="number" min="0" max="5" class="form-control" name="ACI" value="{{data.ACI}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">UCS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="UCS" value="{{data.UCS}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">MDS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="MDS" value="{{data.MDS}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Vmware</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Vmware" value="{{data.Vmware}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">FIS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="FIS" value="{{data.FIS}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal WIFI-->
+<div class="modal fade modal-wifi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Wifi</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">WCS</label>
+                    <input type="number" min="0" max="5" class="form-control" name="WCS" value="{{data.WCS}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">WLC</label>
+                    <input type="number" min="0" max="5" class="form-control" name="WLC" value="{{data.WLC}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">AP</label>
+                    <input type="number" min="0" max="5" class="form-control" name="AP" value="{{data.AP}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Meraki</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Meraki" value="{{data.Meraki}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Aruba</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Aruba" value="{{data.Aruba}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal ROUTINGSWITCHING-->
+<div class="modal fade modal-routingswitching" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Routing&Switching</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">Routing</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Routing" value="{{data.Routing}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">Switching</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Switching" value="{{data.Switching}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">VLAN</label>
+                    <input type="number" min="0" max="5" class="form-control" name="VLAN" value="{{data.VLAN}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">BGP</label>
+                    <input type="number" min="0" max="5" class="form-control" name="BGP" value="{{data.BGP}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">StaticRouting</label>
+                    <input type="number" min="0" max="5" class="form-control" name="StaticRouting" value="{{data.StaticRouting}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+        </div>
+    </div>
+</div>
+
+<!-- modal mostra tabela, se não abre modal COLLABORATION-->
+<div class="modal fade modal-collaboration" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+
+<div class="row">
+<div class="col-xs-12">
+<h3>Collaboration</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">CUCM</label>
+                    <input type="number" min="0" max="5" class="form-control" name="CUCM" value="{{data.CUCM}}">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput5">UCCX</label>
+                    <input type="number" min="0" max="5" class="form-control" name="UCCX" value="{{data.UCCX}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">MediaSense</label>
+                    <input type="number" min="0" max="5" class="form-control" name="MediaSense" value="{{data.MediaSense}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Telepresence</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Telepresence" value="{{data.Telepresence}}">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Webex</label>
+                    <input type="number" min="0" max="5" class="form-control" name="Webex" value="{{data.Webex}}">
+                  </div>
+</div>
+</div>
+<div class="col-md-10 col-lg-10"></div>
+<div class="col-xs-12 col-md-2 col-lg-2 text-center">
+    <button type="submit" class="btn btn-primary btn-block button-full">Update</button>
+</div>
+</div>
+    </form>      
+        </div>
+    </div>
+</div>
+</div>
+
+<!---->
+{{else}}
+<script> window.location ='/';</script>
+{{/if}}

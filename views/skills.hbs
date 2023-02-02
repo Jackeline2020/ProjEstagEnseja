@@ -1,556 +1,529 @@
 {{#if user}}
-<li data-toggle="modal" data-target=".bd-example-modal-lg"><a>New Skill Matrix</a></li>
-<canvas id="doughnut-chart" width="700" height="400"></canvas>
-
-<h4 class="pull-left" style="margin-top: 2px;">Your order</h4>
-<div class="pull-right">
-  <select class="form-control input-sm">
-    <option>Newest</option>
-    <option>Top rated</option>
-    <option>Sold out</option>
-  </select>
+<br>
+<div class="row">
+  <div class="col-md-3 col-numbers">
+    
+<div class="card card-data">
+  <h5 class="card-header">Analistas GSC</h5>
+  <div class="card-body">
+    <a class="btn btn-primary card-number"><h1 class="card-text">80</h1></a>
+  </div>
 </div>
-<div class="clearfix"></div>
-<div class="table-responsive scrollbars">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>
-          <div class="checkbox">
-            <input type="checkbox" id="table2Checkbox1" onchange="$(this).closest('table').find(':checkbox').prop('checked', $(this).is(':checked'));">
-            <label for="table2Checkbox1"></label>
-          </div>
-        </th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>UDM</th>
-        <th>List Price</th>
-        <th>Unit Price</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <div class="checkbox">
-            <input type="checkbox" id="table2Checkbox2">
-            <label for="table2Checkbox2"></label>
-          </div>
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+<br>
+<div class="card card-data">
+  <h5 class="card-header">Analistas cadastrados</h5>
+  <div class="card-body">
+    <a class="btn btn-primary card-number"><h1 class="card-text">{{data.length}}</h1></a>
+  </div>
+</div>
+  </div>
+<div class="col-md-9 col-chart"> <canvas id="doughnut-chart" width="400" height="175"></canvas>
+</div>
 </div>
 
-<!-- modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content stepper-content">
-    <form action="/technologies/create" method="POST">
-        <div class="tab-content">
-          <!-- start cad -->
-          <input  class="hidden" name="nome" value="{{ user.displayName }}">
-          <input  class="hidden" name="email" value="{{ user.email }}">
-          <!-- start cad -->
-          <div id="step1" class="tab-pane fade in active">
-            <div class="row">
-              <div class="col-xs-12">
-                <h3>F5</h3>
-                <div class="form-skill">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">LTM</label>
-                        <select class="form-control" id="formGroupExampleInput" name="LTM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">GTM</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="GTM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput3">ASM</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="ASM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput4">APM</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="APM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput5">BIG-IQ</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="BIGIQ">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step1>
-                    <li class="active"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!--kk-->
-                 <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step2]').trigger('next');">Continue</button>
-                </div>
+<br>
+    
+<!-- Modal -->
+{{#each data}}
+<div class="modal fade" id="ExemploModalCentralizado{{this.id}}" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+  <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="TituloModalCentralizado">{{this.name}}</h4>
+              <div class="panel-subtitle">{{this.email}}</div>
+      </div>
+      <div class="modal-body">
+        <!-- -->
+        <table class="table table-dark">
+<!-- avg f5-->
+        <thead>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
+            <th scope="col">LTM</th>
+            <th scope="col">GTM</th>
+            <th scope="col">ASM</th>
+            <th scope="col">APM</th>
+            <th scope="col">BIG-IQ</th>
+            <th scope="col">AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="line-default">
+            <th class="destaque" scope="row">F5</th>
+            <td>{{this.LTM}}</td>
+            <td>{{this.GTM}}</td>
+            <td>{{this.ASM}}</td>
+            <td>{{this.APM}}</td>
+            <td>{{this.BIGIQ}}</td>
+            <th class="destaque avg-f5">{{#media LTM GTM ASM APM BIGIQ}}
+                {{/media}}
+            </th>    
+          </tr>
+        </tbody>
+        </table>
+<!-- avg security-->
+        <table class="table table-dark">
 
-              </div>
-            </div>
-          </div>
-          <div id="step2" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-                <h3>Security</h3>
-                <div class="form-skill">
+         <thead>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
+            <th scope="col">Firepower</th>
+            <th scope="col">ASA</th>
+            <th scope="col">ISE</th>
+            <th scope="col">Umbrella</th>
+            <th scope="col">NGIPS</th>
+            <th scope="col">AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Security</th>
+            <td>{{this.Firepower}}</td>
+            <td>{{this.ASA}}</td>
+            <td>{{this.ISE}}</td>
+            <td>{{this.Umbrella}}</td>
+            <td>{{this.NGIPS}}</td>
+            <th class="destaque avg-security">{{#media Firepower ASA ISE Umbrella NGIPS}}
+                {{/media}}
+            </th>    
+          </tr>
+        </tbody>
+        </table>
+<!-- avg datacenter-->
+        <table class="table table-dark">
 
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">Firepower</label>
-                        <select class="form-control" id="formGroupExampleInput" name="Firepower">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">ASA</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="ASA">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput3">ISE</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="ISE">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput4">Umbrella</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="Umbrella">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput5">NGIPS</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="NGIPS">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step2>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!-- kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step1]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step3]').trigger('next');">Continue</button>
-                </div>
+         <thead>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
+            <th scope="col">ACI</th>
+            <th scope="col">UCS</th>
+            <th scope="col">MDS</th>
+            <th scope="col">Vmware</th>
+            <th scope="col">FIS</th>
+            <th  scope="col">AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="line-default">
+            <th class="destaque" scope="row">DataCenter</th>
+            <td>{{this.ACI}}</td>
+            <td>{{this.UCS}}</td>
+            <td>{{this.MDS}}</td>
+            <td>{{this.Vmware}}</td>
+            <td>{{this.FIS}}</td>
+            <th class="destaque avg-datacenter">{{#media ACI UCS MDS Vmware FIS}}
+                {{/media}}
+            </th>    
+          </tr>
+        </tbody>
+        </table>
+<!-- avg wifi-->
+        <table class="table table-dark">
 
-              </div>
-            </div>
-          </div>
-          <div id="step3" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-                <h3>Datacenter</h3>
-                <div class="form-skill">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">ACI</label>
-                        <select class="form-control" id="formGroupExampleInput" name="ACI">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">UCS</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="UCS">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput3">MDS</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="MDS">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput4">Vmware</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="Vmware">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput5">FIS</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="FIS">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                </div>
-              </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step3>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-               <!--kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step2]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step4]').trigger('next');">Continue</button>
-                </div>
+         <thead>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
+            <th scope="col">WCS</th>
+            <th scope="col">WLC</th>
+            <th scope="col">AP</th>
+            <th scope="col">Meraki</th>
+            <th scope="col">Aruba</th>
+            <th scope="col">AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Wifi</th>
+            <td>{{this.WCS}}</td>
+            <td>{{this.WLC}}</td>
+            <td>{{this.AP}}</td>
+            <td>{{this.Meraki}}</td>
+            <td>{{this.Aruba}}</td>
+            <th class="destaque avg-wifi">{{#media WCS WLC AP Meraki Aruba}}
+                {{/media}}
+            </th>    
+          </tr>
+        </tbody>
+        </table>
+<!-- avg routingswitching-->
+        <table class="table table-dark">
 
-              </div>
-            </div>
-          </div>
-          <div id="step4" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-              <h3>WIFI</h3>
-                <div class="form-skill">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">WCS</label>
-                        <select class="form-control" id="formGroupExampleInput" name="WCS">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">WLC</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="WLC">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput3">AP</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="AP">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput4">Meraki</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="Meraki">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput5">Aruba</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="Aruba">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                </div>
-              </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step4>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!--kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step3]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step5]').trigger('next');">Continue</button>
-                </div>
+         <thead>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
+            <th scope="col">Routing</th>
+            <th scope="col">Switching</th>
+            <th scope="col">VLAN</th>
+            <th scope="col">BGP</th>
+            <th scope="col">StaticRouting</th>
+            <th scope="col">AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Routing&Switching</th>
+            <td>{{this.Routing}}</td>
+            <td>{{this.Switching}}</td>
+            <td>{{this.VLAN}}</td>
+            <td>{{this.BGP}}</td>
+            <td>{{this.StaticRouting}}</td>
+            <th class="destaque avg-routing">{{#media Routing Switching VLAN BGP StaticRouting}}
+                {{/media}}
+            </th>    
+          </tr>
+        </tbody>
+        </table>
+<!-- avg collaboration-->
+        <table class="table table-dark">
 
-              </div>
-            </div>
-          </div>
-
-          <div id="step5" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-              <h3>RoutingSwitching</h3>
-                <div class="form-skill">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">Routing</label>
-                        <select class="form-control" id="formGroupExampleInput" name="Routing">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">Switching</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="Switching">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput3">VLAN</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="VLAN">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput4">BGP</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="BGP">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput5">Static Routing</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="StaticRouting">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                </div>
-              </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step5>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <!--kk-->
-                <div class="btn-toolbar pull-right">
-                  <button type="button" class="btn btn-secondary"
-                    onClick="$('[step4]').trigger('reset');">Restart</button>
-                  <button type="button" class="btn btn-primary next"
-                    onClick="$('[step6]').trigger('next');">Continue</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <div id="step6" class="tab-pane fade">
-            <div class="row">
-              <div class="col-xs-12">
-              <h3>Collaboration</h3>
-                <div class="form-skill">
-                  <div class="form-group">
-                    <label for="formGroupExampleInput">CUCM</label>
-                        <select class="form-control" id="formGroupExampleInput" name="CUCM">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput2">UCCX</label>
-                        <select class="form-control" id="formGroupExampleInput2" name="UCCX">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput3">Media Sense</label>
-                        <select class="form-control" id="formGroupExampleInput3" name="MediaSense">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput4">Telepresence</label>
-                        <select class="form-control" id="formGroupExampleInput4" name="Telepresence">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="formGroupExampleInput5">Webex</label>
-                        <select class="form-control" id="formGroupExampleInput5" name="Webex">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                </div>
-              </div>
-                <div class="nav-tabs-responsive scrollbars">
-                  <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" step6>
-                    <li class="disabled"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
-                    <li class="disabled"><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
-                    <li class="active"><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
-                  </ul>
-                </div>
-                <button type="button" class="btn btn-secondary"
-                    onClick="$('[step5]').trigger('reset');">Restart</button>
-                <div class="btn-toolbar pull-right">
-                  <button type="submit" class="btn btn-primary">Finish</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </form>
+         <thead>
+          <tr class="line-title">
+            <th scope="col">LoB</th>
+            <th scope="col">CUCM</th>
+            <th scope="col">UCCX</th>
+            <th scope="col">MediaSense</th>
+            <th scope="col">Telepresence</th>
+            <th scope="col">Webex</th>
+            <th scope="col">AVG</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="line-default">
+            <th class="destaque" scope="row">Collaboration</th>
+            <td>{{this.CUCM}}</td>
+            <td>{{this.UCCX}}</td>
+            <td>{{this.MediaSense}}</td>
+            <td>{{this.Telepresence}}</td>
+            <td>{{this.Webex}}</td>
+            <th class="destaque avg-collaboration">{{#media CUCM UCCX MediaSense Telepresence Webex}}
+                {{/media}}
+            </th>    
+          </tr>
+        </tbody>
+      </table>
+       <!-- -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+      </div>
     </div>
   </div>
 </div>
+{{/each}}
+
+<!---->
+<div class="panel panel-primary">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">
+      <h4 class="panel-title">
+        F5
+      </h4>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
+
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>LTM</th>
+                <th>GTM</th>
+                <th>ASM</th>
+                <th>APM</th>
+                <th>BIG IQ</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <!-- Botão para acionar modal -->
+            <tbody>
+              <!-- fazer for each aqui-->
+              {{#each data}}
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.LTM}}</td>
+                <td>{{this.GTM}}</td>
+                <td>{{this.ASM}}</td>
+                <td>{{this.APM}}</td>
+                <td>{{this.BIGIQ}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
+              </tr>
+              {{/each}}
+              <!---->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse2">
+      <h4 class="panel-title">
+        Security
+      </h4>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Firepower</th>
+                <th>ASA</th>
+                <th>ISE</th>
+                <th>Umbrella</th>
+                <th>NGIPS</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+           <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.Firepower}}</td>
+                <td>{{this.ASA}}</td>
+                <td>{{this.ISE}}</td>
+                <td>{{this.Umbrella}}</td>
+                <td>{{this.NGIPS}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
+              </tr>
+              {{/each}}
+              <!---->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse3">
+      <h4 class="panel-title">
+        Data Center
+      </h4>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
+
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>ACI</th>
+                <th>UCS</th>
+                <th>MDS</th>
+                <th>Vmware</th>
+                <th>FIS</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.ACI}}</td>
+                <td>{{this.UCS}}</td>
+                <td>{{this.MDS}}</td>
+                <td>{{this.Vmware}}</td>
+                <td>{{this.FIS}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
+              </tr>
+              {{/each}}
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse4">
+      <h4 class="panel-title">
+        Wifi
+      </h4>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
+
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>WCS</th>
+                <th>WLC</th>
+                <th>AP</th>
+                <th>Meraki</th>
+                <th>Aruba</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.WCS}}</td>
+                <td>{{this.WLC}}</td>
+                <td>{{this.AP}}</td>
+                <td>{{this.Meraki}}</td>
+                <td>{{this.Aruba}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
+              </tr>
+              {{/each}}
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse5">
+      <h4 class="panel-title">
+        Routing&Switching
+      </h4>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
+
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>Routing</th>
+                <th>Switching</th>
+                <th>VLAN</th>
+                <th>BGP</th>
+                <th>StaticRouting</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.Routing}}</td>
+                <td>{{this.Switching}}</td>
+                <td>{{this.VLAN}}</td>
+                <td>{{this.BGP}}</td>
+                <td>{{this.StaticRouting}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
+              </tr>
+              {{/each}}
+              <!---->
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse6">
+      <h4 class="panel-title">
+        Collaboration
+      </h4>
+      <div class="panel-subtitle">Os profissionais com essa tecnologia você encontra aqui</div>
+    </div>
+    <div id="collapse6" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div class="table-responsive scrollbars">
+          <table class="table table-hover dtBasicExample" cellspacing="0" width="100%">
+
+            <thead>
+               <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Job</th>
+                <th>Office</th>
+                <th>CUCM</th>
+                <th>UCCX</th>
+                <th>MediaSense</th>
+                <th>Telepresence</th>
+                <th>Webex</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- fazer for each aqui-->
+                {{#each data}}
+              <tr type="button" data-toggle="modal" data-target="#ExemploModalCentralizado{{this.id}}">
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.job}}</td>
+                <td>{{this.office}}</td>
+                <td>{{this.CUCM}}</td>
+                <td>{{this.UCCX}}</td>
+                <td>{{this.MediaSense}}</td>
+                <td>{{this.Telepresence}}</td>
+                <td>{{this.Webex}}</td>
+                <td>{{formatDate this.updatedAt "long"}}</td>
+              </tr>
+              {{/each}}
+              <!---->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <!---->
 {{else}}
 <script> window.location ='/';</script>
 {{/if}}
+
+
+

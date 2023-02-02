@@ -9,10 +9,12 @@ var flash = require('connect-flash');
 var passport = require('passport');
 var OIDCStrategy = require('passport-azure-ad').OIDCStrategy;
 var users = {};
+const { handlebars } = require('hbs');
+const moment = require('moment'); //Receber moment
+const cron = require("node-cron");
 
 // database connection
-var dbConn  = require('./lib/db');
-
+require('./config/db');
 require('dotenv').config();
 
 passport.serializeUser(function(user, done) {
@@ -46,6 +48,9 @@ async function signInComplete(iss, sub, profile, accessToken, refreshToken, para
 
     if (user) {
       profile['email'] = user.mail ? user.mail : user.userPrincipalName;
+      profile['office'] = user.officeLocation ? user.officeLocation : user.officeLocation;
+      profile['job'] = user.jobTitle ? user.jobTitle : user.jobTitle;
+      profile['_id'] = user.id ? user.id : user.id;
     }
   } catch (err) {
     return done(err);
@@ -76,10 +81,12 @@ passport.use(new OIDCStrategy(
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var authRouter = require('./routes/auth');
-var technologiesGSCRouter = require('./routes/technologiesGSC');
-var graph = require('./graph');
+var skillsGSCRouter = require('./routes/skills');
+var graph = require('./API/graph');
 
 var app = express();
+
+cron.schedule("0 0 * * * *", () => console.log("Diariamente à meia-noite"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -105,6 +112,59 @@ app.use(function(req, res, next) {
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+//Tell Express that we're running behind a
+//reverse proxy that supplies https for you
+app.set('trust proxy', true);
+
+handlebars.registerHelper('media', function(avalue, bvalue, cvalue, dvalue, evalue) {
+   return media = (avalue + bvalue + cvalue + dvalue + evalue)/5;
+});
+
+var DateFormats = {
+  long: "dddd DD/MM/YYYY HH:mm"
+};
+
+handlebars.registerHelper("formatDate", function(datetime, format) {
+    if (moment) {
+      format = DateFormats[format] || format;
+      return moment(datetime).format(format);
+    }
+    else {
+      return datetime;
+    }
+});
+
+/*handlebars.registerHelper('compare', function(lvalue, rvalue, options) {
+
+  if (arguments.length < 3)
+      throw new Error("Handlerbars Helper 'compare' needs 2 parameters");
+
+  var operator = options.hash.operator || "==";
+
+  var operators = {
+      '==':       function(l,r) { return l == r; },
+      '===':      function(l,r) { return l === r; },
+      '!=':       function(l,r) { return l != r; },
+      '<':        function(l,r) { return l < r; },
+      '>':        function(l,r) { return l > r; },
+      '<=':       function(l,r) { return l <= r; },
+      '>=':       function(l,r) { return l >= r; },
+      '!':        function(l,r) { return l, r >= 3; },
+      'typeof':   function(l,r) { return typeof l == r; }
+  }
+
+  if (!operators[operator])
+      throw new Error("Handlerbars Helper 'compare' doesn't know the operator "+operator);
+
+  var result = operators[operator](lvalue,rvalue);
+
+  if( result ) {
+      return options.fn(this);
+  } else {
+      return options.inverse(this);
+  }
+
+}); */
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -122,35 +182,20 @@ app.use(function(req, res, next) {
   next();
 });
 
+//Add middleware that will trick Express
+//into thinking the request is secure
+app.use(function(req, res, next) {
+  if(req.headers['x-arr-ssl'] && !req.headers['x-forwarded-proto']) {
+    req.headers['x-forwarded-proto'] = 'https';
+  }
+  return next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);
 app.use('/index', indexRouter);
-app.use('/skills', indexRouter);
-
-/*app.post('/create', (req, res) => {
-  db.collection('data').insertOne(req.body, (err, result) => {
-    if(err) return console.log(err)
-    console.log('salvo no banco de dados')
-    res.redirect('/index');
-  }) 
-});
-
-/*Parte responsive
-Modal
-Steps
-Sinalizar cards em desenvolvimento
-Arrumar textos dos cards 
-Listar conteúdo na tabela 
-Update, delete
-
-app.get('/skills', (req, res) => {
-  db.collection('data').find().toArray((err, results) => {
-      if (err) return console.log(err)
-      res.render('skills.hbs', { results })
-
-  })
-}); */
+app.use('/skills', skillsGSCRouter);
 
 //catch 404 
 app.use(function(req, res, next) {

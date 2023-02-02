@@ -1,42 +1,495 @@
 {{#if user}}
 <div class="jumbotron jumb-home">
-  <div class="col-md-3">
-    <img alt="Image" class="img-responsive" src="/assets/enseja_logo_split.png">
+  <div class="col-md-3 col-sm-3 ">
+    <img alt="Image" class="img-responsive imgJumb" src="/assets/enseja_logo_split.png">
   </div>
-  <div class="col-md-9"></div>
-  <h1>ENSEJA</h1>
+  <div class="col-md-9">
+  <h1 id="ensejaTitle" class="titulos">ENSEJA</h1>
 
-  <h4>Welcome {{ user.displayName }}!</h4>
+  <h4 class="titulos">Welcome {{ user.displayName }}!</h4>
+
+  
+  </div>
 </div>
 <br>
+<!--new skills-->
 
-<div>
-  <div class="card-geral col-md-4">
-    <div class="card bg-dark text-white">
-      <img class="card-img icone-dash" src="/assets/foguete.png" alt="Card image">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Skills</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
+<div class="col-xs-12 col-sm-12 col-lg-12 bottom-gutter" data-toggle="modal" data-target=".bd-example-modal-lg">
+  <button type="button" class="btn btn-block btn-primary">New Skill Matrix</button>
+</div>
+<!-- modal mostra tabela, se não abre modal-->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content stepper-content">
+      <form action="/skills/create" method="POST">
+          <!-- start cad -->
+          <input  class="hidden" name="_id" value="{{ user._id }}">
+          <input  class="hidden" name="name" value="{{ user.displayName }}">
+          <input  class="hidden" name="email" value="{{ user.email }}">
+          <input  class="hidden" name="office" value="{{ user.office }}">
+          <input  class="hidden" name="job" value="{{ user.job }}">
+        
+
+          <!-- start cad -->
+
+  <div class="tab-content">
+<div id="step1" class="tab-pane fade in active">
+<div class="row">
+<div class="col-xs-12">
+            <h3>F5</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">LTM</label>
+                        <select class="form-control" id="formGroupExampleInput" name="LTM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">GTM</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="GTM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">ASM</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="ASM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">APM</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="APM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">BIG-IQ</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="BIGIQ">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="step2" class="tab-pane fade">
+<div class="row">
+<div class="col-xs-12">
+
+               <h3>Security</h3>
+<div class="form-skill">
+
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Firepower</label>
+                        <select class="form-control" id="formGroupExampleInput" name="Firepower">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">ASA</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="ASA">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">ISE</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="ISE">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">Umbrella</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="Umbrella">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">NGIPS</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="NGIPS">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="step3" class="tab-pane fade">
+<div class="row">
+<div class="col-xs-12">   
+       
+              <h3>Datacenter</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">ACI</label>
+                        <select class="form-control" id="formGroupExampleInput" name="ACI">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">UCS</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="UCS">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">MDS</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="MDS">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">Vmware</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="Vmware">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">FIS</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="FIS">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="step4" class="tab-pane fade">
+<div class="row">
+<div class="col-xs-12">
+            <h3>WIFI</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">WCS</label>
+                        <select class="form-control" id="formGroupExampleInput" name="WCS">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">WLC</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="WLC">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">AP</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="AP">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">Meraki</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="Meraki">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Aruba</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="Aruba">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="step5" class="tab-pane fade">
+<div class="row">
+<div class="col-xs-12">
+             <h3>RoutingSwitching</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">Routing</label>
+                        <select class="form-control" id="formGroupExampleInput" name="Routing">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">Switching</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="Switching">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">VLAN</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="VLAN">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">BGP</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="BGP">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Static Routing</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="StaticRouting">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                </div>
+</div>
+</div>
+</div>
+</div>
+    
+    
+<div id="step6" class="tab-pane fade">
+<div class="row">
+<div class="col-xs-12">
+           <h3>Collaboration</h3>
+<div class="form-skill">
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput">CUCM</label>
+                        <select class="form-control" id="formGroupExampleInput" name="CUCM">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="formGroupExampleInput2">UCCX</label>
+                        <select class="form-control" id="formGroupExampleInput2" name="UCCX">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput3">Media Sense</label>
+                        <select class="form-control" id="formGroupExampleInput3" name="MediaSense">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput4">Telepresence</label>
+                        <select class="form-control" id="formGroupExampleInput4" name="Telepresence">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="formGroupExampleInput5">Webex</label>
+                        <select class="form-control" id="formGroupExampleInput5" name="Webex">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                </div>
+</div>
+</div>
+    <div class="btn-toolbar pull-right">
+            <button type="submit" class="btn btn-primary" onClick=" $(data).closest('.modal').modal('hide');$('[steps]').trigger('complete'); basecoat.alert('Skills salvas com sucesso!').on('accept', function () { $('[steps]').trigger('reset'); });">Finish</button>
+    </div>
+</div>
+</div>
+
+  <div class="row">
+    <div class="nav-tabs-responsive scrollbars col-md-12">
+      <ul class="nav nav-tabs nav-justified progress-steps" data-progress-steps="linear" steps>
+        <li class="active"><a data-toggle="tab" href="#step1"><span class="progress-step"> F5</span></a></li>
+        <li><a data-toggle="tab" href="#step2"><span class="progress-step"> Security</span></a></li>
+        <li><a data-toggle="tab" href="#step3"><span class="progress-step"> Datacenter</span></a></li>
+        <li><a data-toggle="tab" href="#step4"><span class="progress-step"> WIFI</span></a></li>
+        <li><a data-toggle="tab" href="#step5"><span class="progress-step"> RoutingSwitching</span></a></li>
+        <li><a data-toggle="tab" href="#step6"><span class="progress-step"> Collaboration</span></a></li>
+      </ul>
     </div>
   </div>
+
+</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--end new skills-->
+
+<div>
+
+  <div class="card-geral col-md-4" >
+    <a href="/skills"><div class="card card-home bg-primary text-white" data-toggle="tooltip" data-placement="auto top" title="Clique para ver o painel de skills!"> 
+      <img class="card-img icone-dash" src="/assets/foguete.png" alt="Card image" href="/skills">
+      <div class="card-img-overlay">
+        <h5 class="card-title">Skills</h5>
+        <p class="card-text">
+         Here you can fill in your skill matrix and visualize that of your colleagues in a practical and interactive way, making use of the filters and obtaining quick information through the graph. 
+        </p>
+      </div>
+    </div></a>
+  </div>
+  
   <div class="card-geral col-md-4">
 
-    <div class="card bg-dark text-white">
+    <div class="card  card-home bg-dark text-white disable" data-toggle="tooltip" data-placement="auto top" title="Em construção, aguarde novidades!">
       <img class="card-img icone-dash" src="/assets/training.png" alt="Card image">
       <div class="card-img-overlay">
         <h5 class="card-title">Trainings</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">
+          Soon, this will be the new training tab, here you will be able to signal the training you have done and this will be converted into points, which you can receive in the form of awards.
+        </p>
       </div>
     </div>
   </div>
   <div class="card-geral col-md-4">
 
-    <div class="card bg-dark text-white ">
+    <div class="card  card-home bg-dark text-white disable" data-toggle="tooltip"  data-placement="auto top" title="Em construção, aguarde novidades!">
       <img class="card-img icone-dash" src="/assets/medal.png" alt="Card image">
       <div class="card-img-overlay">
         <h5 class="card-title">Certificates</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">
+          Soon, here will be the new certification repository, where you can upload the files and this will also count points, which will be reverted in awards.
+        </p>
       </div>
     </div>
   </div>
